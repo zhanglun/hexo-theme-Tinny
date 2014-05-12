@@ -1,11 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" <?php language_attributes(); ?>> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" <?php language_attributes(); ?>> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" <?php language_attributes(); ?>> <![endif]-->
-<!--[if IE 9 ]><html class="ie ie9" <?php language_attributes(); ?>> <![endif]-->
-<!--[if IE 10 ]><html class="ie ie10" <?php language_attributes(); ?>> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<html <?php language_attributes(); ?>> <!--<![endif]-->
+<html <> <!--<![endif]-->
 <?php $feather_theme_options = get_option('feather'); ?>
 <head>
     <meta charset="utf-8">
@@ -23,7 +17,7 @@
     if ( $site_description && ( is_home() || is_front_page() ) )
         echo $site_description; ?>">
     <?php else : ?>
-    <title><?php wp_title(); ?></title>
+    <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
     <?php endif; // end if basic seo is not disabled ?>
 
 
