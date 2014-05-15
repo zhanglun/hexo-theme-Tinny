@@ -1,1 +1,4 @@
-_config.yml
+# Header
+menu:
+  Home: /
+  Archives: /archives
