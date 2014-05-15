@@ -1,116 +1,35 @@
 <!DOCTYPE html>
-<html <> <!--<![endif]-->
-<?php $feather_theme_options = get_option('feather'); ?>
+<html>
 <head>
-    <meta charset="utf-8">
-    <?php if(isset($feather_theme_options['enable_basic_seo']) && $feather_theme_options['enable_basic_seo'] != 0) : ?>
-    <title><?php wp_title( '|', true, 'right' ); bloginfo( 'name' ); 
-    // Add the blog description for the home/front page.
-    $site_description = get_bloginfo( 'description', 'display' );
-    if ( $site_description && ( is_home() || is_front_page() ) )
-        echo " | $site_description"; ?>
-    </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="<?php 
-    // Add the blog description for the home/front page.
-    $site_description = get_bloginfo( 'description', 'display' );
-    if ( $site_description && ( is_home() || is_front_page() ) )
-        echo $site_description; ?>">
-    <?php else : ?>
-    <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
-    <?php endif; // end if basic seo is not disabled ?>
+  <meta charset="utf-8">
+  <%
+  var title = page.title;
 
+  if (is_archive()){
+    title = 'Archives';
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <!-- Le fav and touch icons -->
-    <!-- Favicons -->
-    <?php if(isset($feather_theme_options['favicon']['url']) && $feather_theme_options['favicon']['url'] != '' ) : ?>
-    <link rel="shortcut icon" href="<?php echo $feather_theme_options['favicon']['url']; ?>">
-    <?php endif; ?>
-
-    <?php wp_head(); ?>
+    if (is_month()){
+      title += ': ' + page.year + '/' + page.month;
+    } else if (is_year()){
+      title += ': ' + page.year;
+    }
+  } else if (is_category()){
+    title = 'Category: ' + page.category;
+  } else if (is_tag()){
+    title = 'Tag: ' + page.tag;
+  }
+  %>
+  <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <%- open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus}) %>
+  <% if (theme.rss){ %>
+    <link rel="alternative" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
+  <% } %>
+  <% if (theme.favicon){ %>
+    <link rel="icon" href="<%- theme.favicon %>">
+  <% } %>
+  <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <%- css('css/style') %>
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <%- partial('google-analytics') %>
 </head>
-<body <?php body_class('body-container'); ?>>
-<!-- header -->
-<header id="header" class="header">
-
-
-    <!-- container -->
-    <div class="container">
-
-        <div class="row">
-
-
-            <!-- col-xs-12 col-md-12 -->
-            <div class="col-md-12">
-
-
-                <?php if(isset($feather_theme_options['logo']['url']) && $feather_theme_options['logo']['url'] != '') : ?>
-                <!-- logo -->
-                <div class="logo">
-
-                    <a href="<?php echo get_home_url(); ?>"><img
-                                src="<?php echo $feather_theme_options['logo']['url']; ?>"
-                                alt="<?php echo get_bloginfo('description', 'display'); ?>"></a>
-
-                </div>
-                <!-- end logo -->
-                <?php else : ?>
-                <!-- logo -->
-                <div class="logo">
-
-                    <a href="<?php echo get_home_url(); ?>"><img
-                                src="<?php echo get_template_directory_uri(); ?>/img/logo.png"
-                                alt="<?php echo get_bloginfo('description', 'display'); ?>"></a>
-
-                </div>
-                <!-- end logo -->
-                <?php endif; ?>
-
-
-                <!-- top content -->
-                <div class="top-content">
-
-
-                    <nav class="menu">
-                        <?php wp_nav_menu(array(
-                                                      'theme_location' => 'primary',
-                        'items_wrap' => '
-                        <ul class="sf-menu">
-                            <li class="toggle"><a href="#">'.__('Menu' , 'dsf').'</a></li>
-                            %3$s
-                        </ul>
-                        ',
-                        'container' => false
-                        )); ?>
-                    </nav>
-
-                    <?php if($feather_theme_options['sidebar_status'] != 3 && !is_page_template('page-fullwidth.php')) : ?>
-                    <!--  toggle  -->
-                    <div class="search">
-
-                        <a href="#" class="toggleSidebar"></a>
-
-                    </div>
-                    <!-- end search -->
-                    <?php endif; ?>
-
-
-                </div>
-                <!-- end top content -->
-
-
-            </div>
-            <!-- end col-mx-12 col-md-12 -->
-
-        </div>
-        <!-- end row -->
-
-    </div>
-    <!-- end container -->
-
-</header><!-- /header -->

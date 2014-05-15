@@ -1,68 +1,32 @@
-<!-- header -->
-<header id="header" class="header">
-    <!-- container -->
-    <div class="container">
-        <div class="row">
-            <!-- col-xs-12 col-md-12 -->
-            <div class="col-md-12">
-                <?php if(isset($feather_theme_options['logo']['url']) && $feather_theme_options['logo']['url'] != '') : ?>
-                <!-- logo -->
-                <div class="logo">
-                    <a href="<?php echo get_home_url(); ?>"><img
-                                src="<?php echo $feather_theme_options['logo']['url']; ?>"
-                                alt="<?php echo get_bloginfo('description', 'display'); ?>"></a>
-                </div>
-                <!-- end logo -->
-                <?php else : ?>
-                <!-- logo -->
-                <div class="logo">
-
-                    <a href="<?php echo get_home_url(); ?>">
-                        <img
-                                src="<?php echo get_template_directory_uri(); ?>/img/logo.png"
-                                alt="<?php echo get_bloginfo('description', 'display'); ?>"></a>
-
-                </div>
-                <!-- end logo -->
-                <?php endif; ?>
-
-                <!-- top content -->
-                <div class="top-content">
-                    <nav class="menu">
-                        <?php wp_nav_menu(array(
-                                                      'theme_location' => 'primary',
-                        'items_wrap' => '
-                        <ul class="sf-menu">
-                            <li class="toggle"><a href="#">'.__('Menu' , 'dsf').'</a></li>
-                            %3$s
-                        </ul>
-                        ',
-                        'container' => false
-                        )); ?>
-                    </nav>
-
-                    <?php if($feather_theme_options['sidebar_status'] != 3 && !is_page_template('page-fullwidth.php')) : ?>
-                    <!--  toggle  -->
-                    <div class="search">
-
-                        <a href="#" class="toggleSidebar"></a>
-
-                    </div>
-                    <!-- end search -->
-                    <?php endif; ?>
-
-
-                </div>
-                <!-- end top content -->
-
-
-            </div>
-            <!-- end col-mx-12 col-md-12 -->
-
-        </div>
-        <!-- end row -->
-
+<header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="<%- config.root %>" id="logo"><%= config.title %></a>
+      </h1>
+      <% if (theme.subtitle){ %>
+        <h2 id="subtitle-wrap">
+          <a href="<%- config.root %>" id="subtitle"><%= theme.subtitle %></a>
+        </h2>
+      <% } %>
     </div>
-    <!-- end container -->
-
-</header><!-- /header -->
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        <% for (var i in theme.menu){ %>
+          <a class="main-nav-link" href="<%- theme.menu[i] %>"><%= i %></a>
+        <% } %>
+      </nav>
+      <nav id="sub-nav">
+        <% if (theme.rss){ %>
+          <a id="nav-rss-link" class="nav-icon" href="<%- theme.rss %>" title="RSS Feed"></a>
+        <% } %>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <%- search_form({button: '&#xF002;'}) %>
+      </div>
+    </div>
+  </div>
+</header>
