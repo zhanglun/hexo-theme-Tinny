@@ -1,8 +1,6 @@
 <% if (site.posts.length){ %>
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
+  <div class="archiveslist">
+    <p class="asidetitle"><a href="<%- config.root %>archives"><%= __('archive_a') %></a></p>
       <%- list_archives() %>
-    </div>
   </div>
 <% } %>

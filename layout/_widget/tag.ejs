@@ -1,8 +1,10 @@
 <% if (site.tags.length){ %>
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <%- list_tags() %>
-    </div>
-  </div>
+<div class="tagslist">
+	<p class="asidetitle"><%= __('tags') %></p>
+		<ul class="clearfix">
+		<% site.tags.sort('name').limit(20).each(function(item){ %>
+			<li><a href="<%- config.root %><%- item.path %>" title="<%= item.name %>"><%= item.name %><sup><%= item.posts.length %></sup></a></li>
+		<% }); %>
+		</ul>
+</div>
 <% } %>

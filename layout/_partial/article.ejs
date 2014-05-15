@@ -1,44 +1,19 @@
-<article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
-    <%- partial('post/category') %>
-  </div>
-  <div class="article-inner">
-    <%- partial('post/gallery') %>
-    <% if (post.link || post.title){ %>
-      <header class="article-header">
-        <%- partial('post/title', {class_name: 'article-title'}) %>
-      </header>
-    <% } %>
-    <div class="article-entry" itemprop="articleBody">
-      <% if (post.excerpt && index){ %>
-        <%- post.excerpt %>
-        <% if (theme.excerpt_link){ %>
-          <p class="article-more-link">
-            <a href="<%- config.root %><%- post.path %>#more"><%= theme.excerpt_link %></a>
-          </p>
-        <% } %>
-      <% } else { %>
-        <%- post.content %>
-      <% } %>
-    </div>
-    <footer class="article-footer">
-      <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link">Share</a>
-      <% if (post.comments && config.disqus_shortname){ %>
-        <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link">Comments</a>
-      <% } %>
-      <%- partial('post/tag') %>
-    </footer>
-  </div>
-  <% if (!index){ %>
-    <%- partial('post/nav') %>
+<section class="<%= item.layout %>" itemscope itemprop="blogPost">
+  <% if (item.link) { %> 
+    <a href="<%- item.link %>" target="_blank"> 
+  <% } else{ %>
+    <a href="<%- config.root %><%- item.path %>" title="<%= item.title %>" itemprop="url">
   <% } %>
-</article>
-
-<% if (!index && post.comments && config.disqus_shortname){ %>
-<section id="comments">
-  <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </div>
+    <h1 itemprop="name"><%= item.title %></h1>
+    <% if (desc){ %>
+     <% if(item.description){ %>
+      <p itemprop="description" ><%- item.description %></p>
+      <% } else if(item.excerpt){ %>
+       <p itemprop="description" ><%= strip_html(item.excerpt).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 140) %></p>
+      <% } else {%>
+           <p itemprop="description" ><%= strip_html(item.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 140) %></p>
+        <% } %>
+    <% } %>
+    <time datetime="<%= date_xml(item.date) %>" itemprop="datePublished"><%= item.date.format(config.date_format) %></time>
+  </a>
 </section>
-<% } %>
