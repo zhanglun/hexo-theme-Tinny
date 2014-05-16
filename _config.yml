@@ -14,6 +14,7 @@ menu:
 #### Widgets
 widgets: 
 - category
+- archive
 - tag
 
 excerpt_link: 阅读全文
@@ -26,7 +27,7 @@ rss: ## RSS address.
 
 #### Image
 imglogo:
-  enable: true             ## display image logo true/false.
+  enable: false             ## display image logo true/false.
   src: img/logo.svg        ## `.svg` and `.png` are recommended,please put image into the theme folder `/pacman/source/img`.
 favicon: img/favicon.ico   ## size:32px*32px,`.ico` is recommended,please put image into the theme folder `/pacman/source/img`.     
 apple_icon: img/pacman.jpg ## size:114px*114px,please put image into the theme folder `/pacman/source/img`.

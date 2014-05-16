@@ -12,7 +12,7 @@
 			</a></div>
 			<nav class="animated">
 				<ul>
-					<ul>
+                    <ul>
 					 <% for (var i in theme.menu){ %>
 						<li><a href="<%- theme.menu[i] %>"><%= i %></a></li>
 					<% } %>
@@ -22,7 +22,7 @@
 						<label>Search</label>
 						<input type="text" id="search" autocomplete="off" name="q" maxlength="20" placeholder="<%= __('search') %>" />
 					</form>
-					<% } else { %>
+					<% } else if (theme.google_cse.enable){ %>
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
 						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="<%= __('search') %>" />
@@ -30,6 +30,8 @@
 					</form>
 					<% } %>
 					</li>
+                <li><div class="closeaside"><a class="closebutton" href="#" title="<%= __('hidesidebar') %>"></a></div></li>
+
 				</ul>
-			</nav>			
+			</nav>	
 </div>
