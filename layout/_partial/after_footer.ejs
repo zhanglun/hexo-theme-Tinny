@@ -15,7 +15,7 @@ $(document).ready(function(){
   var m = $('#main'),
       a = $('#asidepart'),
       c = $('.closeaside'),
-      o = $('.openaside');
+      ta = $('#toc.toc-aside');
   $(window).resize(function(){
     getSize(); 
     if (myWidth >= 1024) {
@@ -24,37 +24,28 @@ $(document).ready(function(){
     {
       m.removeClass('moveMain');
       a.css('display', 'block').removeClass('fadeOut');
-      o.css('display', 'none');
       <% if( is_post()&&(page.toc !== false) && theme.toc.aside){ %>
       $('#toc.toc-aside').css('display', 'none');
       <% } %>  
     }
   });
-//  c.click(function(){
-//    a.addClass('fadeOut').css('display', 'none');
-//    o.css('display', 'block').addClass('fadeIn');
-//    m.addClass('moveMain');
-//  });
-//  o.click(function(){
-//    o.css('display', 'none').removeClass('beforeFadeIn');
-//    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
-//    m.removeClass('moveMain');
-//  });
-  var show = false;
+
+  var show = true;
   c.click(function(){
-    show = !show;
     if(show == true){
         a.addClass('fadeOut').css('display', 'none');
-        o.css('display', 'block').addClass('fadeIn');
+        ta.css('display', 'block').addClass('fadeIn');
         m.addClass('moveMain');  
     }else{
-        o.css('display', 'none').removeClass('beforeFadeIn');
-        a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+        a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');     
+        ta.css('display', 'none'); 
         m.removeClass('moveMain');
+        $('#toc.toc-aside').css('display', 'none');
     }
+    show = !show;
   });
   $(window).scroll(function(){
-    o.css("top",Math.max(80,260-$(this).scrollTop()));
+    o.css("top",Math.max(80,-$(this).scrollTop()));
   });
 });
 </script>
@@ -78,14 +69,9 @@ $(document).ready(function(){
   if(ah.length==0){
     t.css('display','none');
   }else{
-    c.click(function(){
-      ta.css('display', 'block').addClass('fadeIn');
-    });
-    o.click(function(){
-      ta.css('display', 'none');
-    });
+
     $(window).scroll(function(){
-      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+      ta.css("top",Math.max(140,240-$(this).scrollTop()));
     });
   };
 });
