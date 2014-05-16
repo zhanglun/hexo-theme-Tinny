@@ -1,7 +1,7 @@
 // More theme here http//softwaremaniacs.org/media/soft/highlight/test.html
 // Just change those colors
 // https//github.com/chriskempson/tomorrow-theme
-highlight-background = #2d2d2d
+highlight-background = #eee
 highlight-current-line = #393939
 highlight-selection = #515151
 highlight-foreground = #cccccc
@@ -23,6 +23,14 @@ $code-block
   line-height line-height
   font-size font-size
 
+  background #eee
+  color #666
+  padding 0 5px
+  margin 0 2px
+  font-size 0.9em
+  border 1px solid color-border
+  border-radius 3px
+
 $line-numbers
   color highlight-line-numbers 
   font-size 0.85em
@@ -31,6 +39,13 @@ $line-numbers
 
 .article-content   
   pre
+    background: #eee;
+    border: 1px solid #ddd;
+    margin-top: 15px;
+    overflow: auto;
+    padding: 7px 15px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
     font-family font-mono
     @extend $code-block
     code
