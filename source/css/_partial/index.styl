@@ -2,7 +2,6 @@
 #container
   width 95%
   margin 0 auto
-  overflow hidden
   @media mini
     width 96%
   @media tablet
@@ -20,19 +19,25 @@
     transition margin 0.5s ease-out
   section.post
     background color-section
-    box-shadow boxshadow
-    margin-bottom 0.6em
+    background-image url(../img/dots-2x.png)
+    background-position left bottom
+    background-repeat repeat-x
+    background-size 5px auto
+    //box-shadow boxshadow
     a
       display block
-      transition border-left .45s
+      transition all 0.45s
       padding 0.5em
       @media mini
         padding 1em
       &:hover
-        border-left 0.5em solid color-theme
+        //box-shadow 0 0 5px rgba(0,0,0,0.6)
+      &:hover  h1{
+        color color-theme
+        transition all 0.5s ease-in-out
+      }
       h1
         color color-blue
-        line-height line-height+0.5
       p
         color color-font
       time
