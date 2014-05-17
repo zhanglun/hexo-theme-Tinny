@@ -3,7 +3,7 @@ menu:
   首页: /
   存档: /archives
   关于: "http://ncuey.sinaapp.com/CrispElite/"
-  Github: "https://github.com/zhanglun"
+  github: "https://github.com/zhanglun"
 ## you can create `tags` and `categories` folders in `../source`.
 ## And create a `index.md` file in each of them.
 ## set `front-matter`as

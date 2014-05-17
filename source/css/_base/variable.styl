@@ -53,3 +53,14 @@ duoshuo = hexo-config("duoshuo.enable")
 
 //highlight
 highlight = hexo-config("highlight.enable")
+
+//shadow
+vendor(prop, args)
+  -webkit-{prop} args
+  -moz-{prop} args
+  {prop} args
+
+box-shadow()
+  vendor("box-shadow",arguments)
+  
+boxshadow = 0 0 7px 0 rgba(0, 0, 0, 0.2)
