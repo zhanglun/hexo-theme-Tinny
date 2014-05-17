@@ -12,24 +12,28 @@
 #main
   margin 1em 0 0
   line-height line-height+0.3
+  box-shadow boxshadow
   @media tablet
     margin 2em 0 0
     width 75%
     float left
     transition margin 0.5s ease-out
   section.post
-    background color-section
-    background-image url(../img/dots-2x.png)
-    background-position left bottom
-    background-repeat repeat-x
-    background-size 5px auto
     //box-shadow boxshadow
+    padding 0.2em 0.5em 0.1em
+    @media mini
+      padding 0.4em 1em 0.1em
     a
       display block
+      background-color color-white
+      background-image url(../img/dots-2x.png)
+      background-position left bottom
+      background-repeat repeat-x
+      background-size 5px auto
       transition all 0.45s
-      padding 0.5em
+      padding 0 0 0.2em 0
       @media mini
-        padding 1em
+          padding 0 0 0.4em 0
       &:hover
         //box-shadow 0 0 5px rgba(0,0,0,0.6)
       &:hover  h1{
