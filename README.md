@@ -5,6 +5,9 @@ Tinny
 
 based on [pacman](https://github.com/A-limon/pacman).
 
+[demo](http://zhanglun.github.io/)
+
+
     .
     ├── _config.yml
     ├── languages
@@ -15,4 +18,3 @@ based on [pacman](https://github.com/A-limon/pacman).
 to be continued……
 
 
-hard!!!
