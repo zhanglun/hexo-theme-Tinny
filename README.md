@@ -21,7 +21,7 @@ to be continued……
 ##Setting
 
 title: Hexo
-subtitle:
+subtitle: 
 description:
 author: John Doe
 email:
