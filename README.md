@@ -18,3 +18,13 @@ based on [pacman](https://github.com/A-limon/pacman).
 to be continued……
 
 
+##Setting
+
+title: Hexo
+subtitle:
+description:
+author: John Doe
+email:
+language:
+
+
