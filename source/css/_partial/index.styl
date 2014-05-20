@@ -2,7 +2,6 @@
 #container
   width 95%
   margin 0 auto
-  overflow hidden
   @media mini
     width 96%
   @media tablet
@@ -13,26 +12,38 @@
 #main
   margin 1em 0 0
   line-height line-height+0.3
+  box-shadow boxshadow
   @media tablet
     margin 2em 0 0
     width 75%
     float left
     transition margin 0.5s ease-out
   section.post
-    background color-section
-    margin-bottom 0.125em
-    a
-      display block
-      border-left 0.5em solid color-gray
-      transition border-left .45s
-      padding 0.5em
+    //box-shadow boxshadow
+    
+    padding 0.2em 0.8em 0.1em
+    @media mini
+      padding 1.2em 1.5em 0.1em
+    article
+      background-color color-white
+      background-image url(../img/dots-2x.png)
+      background-position left bottom
+      background-repeat repeat-x
+      background-size 5px auto
+      padding 0 0 0.4em 0
       @media mini
-        padding 1em
+          padding 0 0 0.8em 0
+    a
+      //display block
+      transition all 0.45s
       &:hover
-        border-left 0.5em solid color-theme
+        //box-shadow 0 0 5px rgba(0,0,0,0.6)
+      &:hover  h1{
+        color color-theme
+        transition all 0.5s ease-in-out
+      }
       h1
         color color-blue
-        line-height line-height+0.5
       p
         color color-font
       time
@@ -40,7 +51,11 @@
         display block
         margin 0.5em 0
         font-size 0.5em
-
+    .article-more-link
+      font-size 0.875em
+      overflow hidden
+      a
+        float right
 .moveMain
   margin-left 10% !important
 
@@ -100,13 +115,13 @@
   margin 1em 0
   width 97%
   padding 2em 0 2em 3%
+  box-shadow boxshadow
   @media tablet
     margin 2em 0
     width 18.5%
     padding-left 0.5%
     float left
   background color-section
-  border-left 0.5em solid color-gray
   h2
     width 90%
     color color-blue
@@ -128,12 +143,12 @@
     float right
     margin-left 2% !important
   section.post
-    width 100%
+    //width 100%
     @media mini
-      float left
-      width 50%
+      //float left
+      //width 50%
     @media tablet
-      width 33.333%
+      //width 33.333%
 
 .archive-nav
   @media mini

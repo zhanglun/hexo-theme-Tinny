@@ -1,5 +1,5 @@
 //Color
-color-background = #dddddd
+color-background = #ededef
 color-font = #817c7c
 color-white = #ffffff
 color-blue = #2ca6cb
@@ -53,3 +53,15 @@ duoshuo = hexo-config("duoshuo.enable")
 
 //highlight
 highlight = hexo-config("highlight.enable")
+
+//shadow
+vendor(prop, args)
+  -webkit-{prop} args
+  -moz-{prop} args
+  {prop} args
+
+box-shadow()
+  vendor("box-shadow",arguments)
+
+boxshadow = 0 0 3px 0 rgba(0, 0, 0, 0.2)
+background-line = color-white url(../img/dots-2x.png) left bottom 5px auto repeat-x

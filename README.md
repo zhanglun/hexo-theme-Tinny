@@ -1,9 +1,9 @@
 Tinny
 =====
 
-##a theme for hexo
+##a theme for hexo 
 
-I am planing making a theme for my github page with hexo.
+based on [pacman](https://github.com/A-limon/pacman).
 
     .
     ├── _config.yml

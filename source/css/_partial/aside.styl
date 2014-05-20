@@ -3,6 +3,7 @@
   background color-section
   margin 1em 0 0
   padding 0.5em 2% 1em
+  box-shadow boxshadow
   @media tablet
     position relative
     float left
@@ -12,10 +13,12 @@
 .asidetitle
   font-size 1.1em
   color color-blue
+  background-color color-white
+  background-image url(../img/dots-2x.png)
+  background-position left bottom
+  background-repeat repeat-x
+  background-size 5px auto
   padding 0 0 0.3125em 0
-  border-bottom 0.1875em solid color-gray
-  a
-    color color-blue
     &:hover
       color color-theme
       transition color .5s
@@ -31,7 +34,10 @@
     float none
     margin 1em 0 0
   li 
-    border-bottom 1px solid color-gray
+    background-image url(../img/dots-2x.png)
+    background-position left bottom
+    background-repeat repeat-x
+    background-size 5px auto
     a
       display block
       padding 0.5em 5%
