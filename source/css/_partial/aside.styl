@@ -34,10 +34,7 @@
     float none
     margin 1em 0 0
   li 
-    background-image url(../img/dots-2x.png)
-    background-position left bottom
-    background-repeat repeat-x
-    background-size 5px auto
+
     a
       display block
       padding 0.5em 5%
@@ -170,6 +167,105 @@
       &:hover
         color color-theme
         transition color .25s
+
+#authorInfo
+  overflow hidden
+  text-align center 
+  padding-top 2em
+  margin-bottom 1.5em
+  background-image url(../img/dots-2x.png)
+  background-position left bottom
+  background-repeat repeat-x
+  background-size 5px auto
+  @media mini
+    padding-top 0.5em
+  @media tablet
+    padding-top 1em
+
+.author-info
+  margin 0.8em 0 0.2em
+  line-height 28px
+
+.author-logo
+  width w=(110/16)em
+  height w
+  margin 0 auto
+  if dataURI
+    background no-repeat url(author-img-data) left top
+  else
+    background no-repeat url(root+author-img) left top 
+  background-size w w
+  border-radius (w/2)
+  transition transform 2s ease-out
+  &:hover
+    transform rotateZ(360deg)
+  @media mini
+    margin 0 1em 0 0
+    float left
+  @media tablet
+    float none
+    width w=(110/12)em
+    height w
+    background-size w w
+    border-radius (w/2)
+    margin 0 auto
+
+.info-logo
+  if ShowCustomFont
+    font-family font-custom-family
+    font-smoothing()
+    font-size font-size+50
+    line-height 1.3em
+  else
+    font-family font-default
+    line-height line-height+0.15
+  width 90%
+  margin 0 auto
+  color color-white
+  @media mini
+    margin 4.5em 0 2em 0
+    float left
+    width 75%
+
+.social-font
+  width 100%
+  margin 0 auto
+  overflow hidden
+  float left
+  text-align center
+  @media tablet
+    float none
+    width auto
+    padding 0
+    backgroun #343434
+  a
+    display inline-block
+    color #343434
+    font-size font-size+80
+    margin 0.5em
+    @media mini
+      float none
+      margin 0 
+      padding 0.3em
+    @media tablet
+      float none
+      padding 0.3em
+    &:hover:before
+      color color-blue
+    &[title="weibo"]::before,&[title="twitter"]::before,&[title="github"]::before,&[title="facebook"]::before
+      font-family font-icon-family
+      font-smoothing()
+    &[title="weibo"]::before
+      content "\f18a"
+    &[title="twitter"]::before
+      content "\f099"
+    &[title="github"]::before
+      content "\f09b"
+    &[title="facebook"]::before
+      content "\f09a"
+    &[title="qq"]::before
+      content: "\f1d6";
+ 
 
 //back-top
 #back-top 
