@@ -21,7 +21,7 @@
     <p class="article-more-link">
       <time datetime="<%= date_xml(item.date) %>" itemprop="datePublished"><%= item.date.format(config.date_format) %></time>
       <% if (theme.excerpt_link){ %>
-          <a href="<%- config.root %><%- item.path %>"><%= theme.excerpt_link %>&#2949;</a>
+          <a href="<%- config.root %><%- item.path %>"><%= theme.excerpt_link %>&raquo;</a>
       <% } %>
     </p>
 
