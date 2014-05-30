@@ -1,9 +1,7 @@
 ##### Menu
 menu:
-  首页: /
-  存档: /archives
-  关于: "http://ncuey.sinaapp.com/CrispElite/"
-  github: "https://github.com/zhanglun"
+  Home: /
+  Archives: /archives
 ## you can create `tags` and `categories` folders in `../source`.
 ## And create a `index.md` file in each of them.
 ## set `front-matter`as
@@ -17,7 +15,7 @@ widgets:
 - archive
 - tag
 
-excerpt_link: 阅读全文
+excerpt_link: read more
 
 ## provide six widgets:category,tag,rss,archive,tagcloud,links.
 ## modify links in `/layout/_widget/links.ejs`.
@@ -27,10 +25,10 @@ rss: ## RSS address.
 
 #### Image
 imglogo:
-  enable: false             ## display image logo true/false.
-  src: img/logo.svg        ## `.svg` and `.png` are recommended,please put image into the theme folder `/pacman/source/img`.
-favicon: img/favicon.ico   ## size:32px*32px,`.ico` is recommended,please put image into the theme folder `/pacman/source/img`.     
-apple_icon: img/pacman.jpg ## size:114px*114px,please put image into the theme folder `/pacman/source/img`.
+  enable: true             ## display image logo true/false.
+  src: img/logo.svg        ## `.svg` and `.png` are recommended,please put image into the theme folder `/Tinny/source/img`.
+favicon: img/favicon.ico   ## size:32px*32px,`.ico` is recommended,please put image into the theme folder `/Tinny/source/img`.     
+apple_icon: img/Tinny.jpg ## size:114px*114px,please put image into the theme folder `/Tinny/source/img`.
 
 #### Author Avatar Picture
 author_img_enable: true ## display author avatar picture
@@ -44,7 +42,7 @@ author_img: img/myLogo.png ## size:220px*220px.
 
 #### Font
 ShowCustomFont: true  
-## you can change custom font in `variable.styl` and `font.styl` which in the theme folder `/pacman/source/css`.
+## you can change custom font in `variable.styl` and `font.styl` which in the theme folder `/Tinny/source/css`.
 
 #### Toc
 toc:
@@ -57,18 +55,18 @@ toc:
 fancybox: false 
 ## if you use gallery post or want use fancybox please set the value to true.
 ## if you want use fancybox in ANY post please copy the file `fancybox.js`.
-## in theme folder `/pacman/scripts` to your hexo blog folder `../scritps`.
+## in theme folder `/Tinny/scripts` to your hexo blog folder `../scritps`.
 
 #### Author information
 author:
-  google_plus:    ## eg:116338260303228776998 for https://plus.google.com/u/0/116338260303228776998
-  intro_line1: "Hello ,I'm CrispElite in Google." ## eg: "Hello ,I'm Larry Page in Google."
-  intro_line2: "This is my blog, believe it or not." ## eg: "This is my blog,believe it or not."
-  weibo: "2671026564"     ## e.g. 436062867 for http://weibo.com/436062867
-  twitter:    ## e.g. yangjiansky for https://twitter.com/yangjiansky
-  github: "zhanglun"    ## e.g. A-limon for https://github.com/A-limon
-  facebook:   ## e.g. yangjian for https://favebook.com/yangjian
-  tsina:      ## e.g. 1664838973  Your weibo ID,It will be used in share button.
+  google_plus:  ## eg:116338260303228776998 for https://plus.google.com/u/0/116338260303228776998
+  intro_line1:  ## eg: "Hello ,I'm Larry Page in Google."
+  intro_line2:  ## eg: "This is my blog,believe it or not."
+  weibo:        ## e.g. 436062867 for http://weibo.com/436062867
+  twitter:      ## e.g. yangjiansky for https://twitter.com/yangjiansky
+  github:       ## e.g. A-limon for https://github.com/A-limon
+  facebook:     ## e.g. yangjian for https://favebook.com/yangjian
+  tsina:        ## e.g. 1664838973  Your weibo ID,It will be used in share button.
 
 #### Comment
 duoshuo: 
