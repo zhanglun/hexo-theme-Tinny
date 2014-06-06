@@ -25,7 +25,7 @@ Modify <code>theme</code> setting in blog folder <code>_config.yml</code> to <co
 	
 **please backup your _config.yml file before update.**
 
-###Configuration
+##Configuration
 
 Modify settings in the file <code>_config.yml</code>
 
