@@ -1,49 +1,33 @@
 Tinny
 =====
 
-##a theme for hexo 
+##theme for hexo 
 
-based on [pacman](https://github.com/A-limon/pacman).
+simple theme based on [pacman](https://github.com/A-limon/pacman).
 
 [demo](http://zhanglun.github.io/)
 
+##Installation
 
-    .
-    ├── _config.yml
-    ├── languages
-    ├── layout
-    ├── scripts
-    └── source
+###Install
 
-to be continued……
+	$ git clone https://github.com/A-limon/pacman.git themes/pacman
+
+	
+###Enable
+
+Modify <code>theme</code> setting in blog folder <code>_config.yml</code> to <code>Tinny</code>.
+
+###Update
+
+	cd themes/Tinny
+	git pull
+	
+**please backup your _config.yml file before update.**
+
+you can find all message in the file <code>_config.yml</code>
+
+2014/06/06
 
 
-##Setting
-
-title: Hexo
-subtitle: 
-description:
-author: John Doe
-email:
-language:
-
-
-# Pagination
-## Set per_page to 0 to disable pagination
-per_page: 10
-pagination_dir: page
-
-# Disqus
-disqus_shortname:
-
-# Extensions
-## Plugins: https://github.com/tommy351/hexo/wiki/Plugins
-## Themes: https://github.com/tommy351/hexo/wiki/Themes
-theme: landscape
-exclude_generator:
-
-# Deployment
-## Docs: http://hexo.io/docs/deployment.html
-deploy:
-  type:
 
