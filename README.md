@@ -11,7 +11,7 @@ simple theme based on [pacman](https://github.com/A-limon/pacman).
 
 ###Install
 
-	$ git clone https://github.com/A-limon/pacman.git themes/pacman
+	$ git clone https://github.com/zhanglun/Tinny.git
 
 	
 ###Enable
