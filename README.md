@@ -25,7 +25,11 @@ Modify <code>theme</code> setting in blog folder <code>_config.yml</code> to <co
 	
 **please backup your _config.yml file before update.**
 
-you can find all message in the file <code>_config.yml</code>
+###Configuration
+
+Modify settings in the file <code>_config.yml</code>
+
+
 
 2014/06/06
 
