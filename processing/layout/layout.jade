@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-html(lang="en")
-head
-	meta(charset="UTF-8")
-	title Document
-	link(rel="stylesheet" href="../source/css/base.css")
-	header
-		h1 Hello
-	div(class="wrapper")
-		p Container
-		include index.jade
-	footer
-		p CopyRight
-body
+doctype html
+html
+  head
+    title Document
+    link(rel='stylesheet', href='css/base.css')
+  body
+    div(class="wrapper")
+        include _widget/header.jade
+        include index.jade
