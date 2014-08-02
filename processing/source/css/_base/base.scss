@@ -16,11 +16,14 @@ html, body {
 
 .wrapper {
   height: 100%;
+  width:100%;
 }
 
 #container {
+  width:1120px;
   background: #d43d4d;
-  margin-left: $site-action;
+//  margin-left: $site-action;
+  margin:0 auto;
   overflow: hidden;
 }
 

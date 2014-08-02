@@ -9,6 +9,11 @@ menu:
 ## title: tags (or categories)
 ## ---
 
+profile:
+  enable: true
+  href: http://zhanglun.github.io/
+
+
 #### Widgets
 widgets: 
 - category
