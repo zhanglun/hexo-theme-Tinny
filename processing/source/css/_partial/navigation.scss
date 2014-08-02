@@ -1,0 +1,28 @@
+#navigation {
+  float: left;
+  width: 200px;
+  background: #ebcccc;
+}
+#site-header{
+  .profile{
+    img{
+      width:120px;
+      height:120px;
+      border-radius:100%;
+    }
+  }
+  .site-subtitle{
+    font-size:18px;
+    font-weight:blod;
+    color:#343434;
+    margin: 0 0 12.5px;
+  }
+  .site-description{
+    font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    color: #aaaaaa;
+    font-size: 12px;
+    line-height: 20px;
+    margin: 12.5px 0 0;
+  }
+}

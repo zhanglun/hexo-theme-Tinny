@@ -9,3 +9,9 @@ div(id="navigation")
 				img(src="#{theme.imglogo.src}")
 			p(class="site-subtitle") #{config.subtitle}+ 战棍
 			p(class="site-description") #{config.description}
+	div(class="main-sidebar")
+		nav
+			ul
+				each item in theme.menu
+					li
+						a(href="#{item}")=item
