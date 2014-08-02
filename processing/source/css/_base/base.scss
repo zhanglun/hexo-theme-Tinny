@@ -1,0 +1,39 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.clearfix:after {
+  content: " ";
+  display: none;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+  line-height: 0;
+}
+
+.wrapper {
+  height: 100%;
+}
+
+#container {
+  background: #d43d4d;
+  margin-left: $site-action;
+  overflow: hidden;
+}
+
+#navigation {
+  float: left;
+  width: 300px;
+  background: #ebcccc;
+}
+
+#main {
+float:left;
+}
+
+#footer{
+  padding:1px;
+}

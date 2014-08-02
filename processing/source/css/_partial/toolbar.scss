@@ -1,0 +1,13 @@
+#toolbar{
+  width: $site-action;
+  height:$height100p;
+  background:#333;
+  color:#fff;
+  position: fixed;
+  top:0;
+  left:0;
+  >ul{
+    margin:0;
+    padding:0;
+  }
+}

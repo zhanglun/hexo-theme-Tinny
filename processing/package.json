@@ -1,0 +1,10 @@
+{
+    "name":"Processing",
+    "author":"zhanglun",
+    "email":"zhanglun1410@gmail.com",
+    "github":"http://github.com/zhanglun",
+    "dependencies":{
+        "grunt":"~0.4.1",
+        "grunt-contrib-watch": "~0.5.3"
+    }
+}
