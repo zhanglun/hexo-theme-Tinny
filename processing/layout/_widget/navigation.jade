@@ -10,8 +10,14 @@ div(id="navigation")
 			p(class="site-subtitle") #{config.subtitle}
 			p(class="site-description") #{config.description}
 	div(class="main-sidebar")
-		nav
-			ul
-				each value,key in theme.menu
-					li
-						a(href="#{value}")=key
+		aside(id="site-nav")
+			nav
+				ul
+					each value,key in theme.menu
+						li
+							a(href="#{value}")=key
+
+	-var time
+	-site.categories.sort('date', 'desc').each(function(item){
+		p= item.name
+	-})
