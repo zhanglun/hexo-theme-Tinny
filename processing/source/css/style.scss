@@ -1,6 +1,97 @@
-@import "_base/normalize.css";
+/*@import "_base/normalize.css";
 @import "_base/variables";
 @import "_base/base";
 @import "_partial/toolbar";
 @import "_partial/navigation";
-//@import ""
+//@import ""*/
+
+
+$site-action:50px;
+$height100p:100%;
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.clearfix:after {
+  content: " ";
+  display: none;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+  line-height: 0;
+}
+
+.wrapper {
+  height: 100%;
+  width:100%;
+}
+
+#container {
+  width:1120px;
+  background: #d43d4d;
+  //  margin-left: $site-action;
+  margin:0 auto;
+  overflow: hidden;
+}
+#main {
+  float:left;
+}
+
+#footer{
+  padding:1px;
+}
+
+a{text-decoration:none;}
+
+
+#toolbar{
+  width: $site-action;
+  height:$height100p;
+  background:#333;
+  color:#fff;
+  position: fixed;
+  top:0;
+  left:0;
+  >ul{
+    margin:0;
+    padding:0;
+  }
+}
+
+#navigation {
+  float: left;
+  width: 200px;
+  background: #ebcccc;
+}
+#site-header{
+  .profile{
+    img{
+      width:120px;
+      height:120px;
+      border-radius:100%;
+    }
+  }
+  .site-subtitle{
+    font-size:18px;
+    font-weight:blod;
+    color:#343434;
+    margin: 0 0 12.5px;
+  }
+  .site-description{
+    font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    color: #aaaaaa;
+    font-size: 12px;
+    line-height: 20px;
+    margin: 12.5px 0 0;
+  }
+  .main-sidebar{
+    ul>li{
+      list-style-type:none;
+    }
+  }
+}
