@@ -38,3 +38,24 @@ categories 返回的是一个对象 Object。包含了很多个博文 所定义�
     });
 
 **不要告诉我这是用jQuery的方法！**
+
+但是 在引用主题中的 widget 时，又遇到了问题，theme.widget 在配置文件中 是像这样的格式
+
+    #### Widgets
+    widgets:
+    - category
+    - archive
+    - tag
+
+返回的是一个数组，可以使用像在js中操作数组一样操作返回的数组，for循环遍历或者使用 JS 中原生的 [forEach()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)。
+
+而菜单返回的是对象，在配置文件中的写法如下：
+
+    menu:
+      首页: #
+      归档: http://www.baidu.com
+      关于: http://ncuey.sinaapp.com/CrispElite/
+      github: https://github.com/zhanglun
+      博客园: http://www.cnblogs.com/zhanglun/
+
+这应该和配置文件的语法有关系
