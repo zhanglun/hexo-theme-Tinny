@@ -1,12 +1,15 @@
 doctype html
 if config.language
 	html(lang="#{config.language}")
+else
+	html(lang="en")
 
-		head
-			meta(charset="UTF-8")
-			title Document
-			link(rel='stylesheet', href='css/style.css')
-		body
-			div(class="wrapper")
-				include _partial/toolbar
-				include _partial/container
+head
+	meta(charset="UTF-8")
+	title Document
+	link(rel="stylesheet", href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css")
+	link(rel='stylesheet', href='css/style.css')
+body
+	div(class="wrapper")
+		include _partial/toolbar
+		include _partial/container
