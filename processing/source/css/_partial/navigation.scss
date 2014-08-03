@@ -2,8 +2,8 @@
   float: left;
   width: 200px;
   background: #ebcccc;
-  a{
-    color:#333;
+  a {
+    color: #333;
     &:hover {
       color: $theme-color;
       text-decoration: underline;
@@ -52,4 +52,12 @@
   font-family: FontAwesome;
   margin-right: 10px;
   font-size: 14px;
+}
+
+.widget-tagcloud {
+  a {
+    display: inline-block;
+    padding:2px;
+    margin:2px;
+  }
 }
