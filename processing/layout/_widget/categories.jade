@@ -1,1 +1,7 @@
-p Categories
+div(id="site-categories" class="widget widget-categories")
+	h2(class="widget-title")= __('categories')
+	ul
+		-site.categories.sort('date', 'desc').each(function(item){
+			li(class="cat-item")
+				a(href="#{config.root}categories/#{item.name}")=item.name
+		-})

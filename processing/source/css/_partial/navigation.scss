@@ -3,21 +3,22 @@
   width: 200px;
   background: #ebcccc;
 }
-#site-header{
-  .profile{
-    img{
-      width:120px;
-      height:120px;
-      border-radius:100%;
+
+#site-header {
+  .profile {
+    img {
+      width: 120px;
+      height: 120px;
+      border-radius: 100%;
     }
   }
-  .site-subtitle{
-    font-size:18px;
-    font-weight:blod;
-    color:#343434;
+  .site-subtitle {
+    font-size: 18px;
+    font-weight: blod;
+    color: #343434;
     margin: 0 0 12.5px;
   }
-  .site-description{
+  .site-description {
     font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 400;
     color: #aaaaaa;
@@ -25,9 +26,28 @@
     line-height: 20px;
     margin: 12.5px 0 0;
   }
-  .main-sidebar{
-    ul>li{
-      list-style-type:none;
+}
+
+.main-sidebar {
+  ul {
+    > li {
+      line-height: 30px;
+      font-size: 14px;
+    }
+    a {
+      color: #333;
+      display: block;
+      &:hover {
+        color: $theme-color;
+        text-decoration: underline;
+      }
     }
   }
+}
+
+.widget-categories ul > li:before {
+  content: "\f115";
+  font-family: FontAwesome;
+  margin-right: 10px;
+  font-size: 14px;
 }

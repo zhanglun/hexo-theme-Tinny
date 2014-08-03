@@ -10,7 +10,7 @@ div(id="navigation")
 			p(class="site-subtitle") #{config.subtitle}
 			p(class="site-description") #{config.description}
 	div(class="main-sidebar")
-		aside(id="site-nav")
+		aside(id="site-nav" class="widget-nav-menu")
 			nav
 				ul
 					each value,key in theme.menu
@@ -25,10 +25,5 @@ div(id="navigation")
 		-}else if(item== "tag"){
 			include ../_widget/tags.jade
 		-}
-
-
 	-})
-	//if(has_categories != -1)
-	-site.categories.sort('date', 'desc').each(function(item){
-		p= item.name
-	-})
+
