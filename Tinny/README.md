@@ -1,37 +1,38 @@
-Tinny
-=====
+##Tinny
 
-##theme for hexo 
+
+###theme for hexo
 
 simple theme based on [pacman](https://github.com/A-limon/pacman).
 
 [demo](http://zhanglun.github.io/)
 
-##Installation
+###Installation
 
-###Install
+####Install
 
-	$ git clone https://github.com/zhanglun/Tinny.git
+	$ git clone https://github.com/zhanglun/hexo-theme.git
 
-	
-###Enable
+
+####Enable
 
 Modify <code>theme</code> setting in blog folder <code>_config.yml</code> to <code>Tinny</code>.
 
-###Update
+    theme: hexo-theme/Tinny
 
-	cd themes/Tinny
+####Update
+
+	cd themes/hexo-theme
 	git pull
-	
+
 **please backup your _config.yml file before update.**
 
-##Configuration
+###Configuration
 
 Modify settings in the file <code>_config.yml</code>
 
 
-
-2014/06/06
+2014/08/04
 
 
 
