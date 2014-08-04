@@ -2,13 +2,19 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-//  font-size:100%;
+  font-size: 15px;
+  line-height: 25px;
+  color: #666666;
+  background-color: #ffffff;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
   font-family: Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", sans-serif;
 }
 
 a {
   text-decoration: none;
-  transition(all,0.3s);
+  transition(all, 0.3s);
+  color: gray3;
 }
 
 ul {
@@ -37,30 +43,119 @@ li {
 
 #container {
   width: 1120px;
-  background: #d43d4d;
-  //  margin-left: $site-action;
   margin: 0 auto;
   overflow: hidden;
 }
 
 #main {
-  float: left;
+  /*float: left;*/
+  margin-left: nav-width;
 }
 
 #footer {
   padding: 1px;
+  clear: both;
 }
+
+// widget
+// ------------
 
 .widget {
   margin-top: 16px;
   padding-top: 16px;
-  border-top:1px solid #e5e5e5;
-  font-size:14px;
-  li{
-    font-size:14px;
-    line-height:20px;
+  border-top: 1px solid #e5e5e5;
+  font-size: 14px;
+  li {
+    font-size: 14px;
+    line-height: 20px;
   }
 }
-.widget-title{
-  font-size:14px;
+
+.widget-title {
+  font-size: 14px;
+}
+
+// button
+// ------------
+
+.btn-small {
+  line-height: 20px;
+  font-size: 12px;
+  padding: 5px 12px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 5px 15px;
+  margin-bottom: 0;
+  line-height: 30px;
+  font-size: 15px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  color: #ffffff;
+  border: none;
+  font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #333333;
+  text-transform: capitalize;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-transition: background 0.2s;
+  -moz-transition: background 0.2s;
+  -o-transition: background 0.2s;
+  transition: background 0.2s;
+  &:hover {
+    background-color: #7cc576;
+    text-decoration: none;
+    color: #ffffff;
+  }
+}
+
+// media query
+
+.more-link {
+  margin-top: 30px;
+}
+
+.more-link {
+  display: block;
+}
+
+// 首页 文章标题列表 icon
+.icon-file-text:before {
+  content: "\f15c";
+}
+
+.icon-calendar-empty:before {
+  content: "\f133";
+}
+
+.icon-comment-alt:before {
+  content: "\f0e5";
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  display: inline-block;
+  speak: none;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  display: inline;
+  width: auto;
+  height: auto;
+  line-height: normal;
+  vertical-align: baseline;
+  background-image: none;
+  background-position: 0% 0%;
+  background-repeat: repeat;
+  margin-top: 0;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
 }
