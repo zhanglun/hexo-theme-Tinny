@@ -36,3 +36,13 @@ div(id="main")
 				|proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			a(class="more-link" href="#")
 				span(class="btn btn-small") Continue reading
+
+	p #{page}
+		-for(var key in page){
+			p=page[key]
+			-for(var val in page[key]){
+				-if(page[key][val]){
+					p=page[key][val]
+				-}
+			-}
+		-}
