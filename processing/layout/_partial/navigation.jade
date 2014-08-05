@@ -16,14 +16,14 @@ div(id="navigation")
 					each value,key in theme.menu
 						li
 							a(href="#{value}")=key
-	-var widgets=theme.widgets;
-	-widgets.forEach(function(item){
-		-if(item== "category"){
-			include ../_widget/categories.jade
-		-}else if(item == "archive"){
-			include ../_widget/archive.jade
-		-}else if(item== "tag"){
-			include ../_widget/tags.jade
-		-}
-	-})
+		-var widgets=theme.widgets;
+		-widgets.forEach(function(item){
+			-if(item== "category"){
+				include ../_widget/categories.jade
+			-}else if(item == "archive"){
+				include ../_widget/archive.jade
+			-}else if(item== "tag"){
+				include ../_widget/tags.jade
+			-}
+		-})
 
