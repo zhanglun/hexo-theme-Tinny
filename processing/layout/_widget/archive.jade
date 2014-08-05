@@ -1,2 +1,5 @@
 aside(id="site-archive" class="widget widget-archive")
-	ul
+	h2(class="widget-title")= __('archive')
+	p(class="asidetitle")
+		a(href="#{config.root}archives")= __('archive_a')
+		list_archives()
