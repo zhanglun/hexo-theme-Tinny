@@ -38,9 +38,25 @@ Modify <code>theme</code> setting in blog folder <code>_config.yml</code> to <co
 
 Modify settings in the file <code>_config.yml</code>
 
+####enable duoshuo
+
+add short name of duoshuo in `_config.yml`:
+
+```
+duoshuo: 
+  enable: true  ## duoshuo.com
+  short_name: <your short name>    ## duoshuo short name.
+```
+
+edit `comment.ejs` to put the same short name here:
+
+```js
+var duoshuoQuery = {short_name:"<your short name>"};
+...
+```
 
 
-2014/08/04
+2014/08/06
 
 
 

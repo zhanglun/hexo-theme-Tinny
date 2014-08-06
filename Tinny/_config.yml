@@ -10,7 +10,9 @@ menu:
 ## ---
 
 #### site-header profile link
-
+profile:
+  enable: true
+  href: http://zhanglun.github.io/
 
 
 #### Widgets
