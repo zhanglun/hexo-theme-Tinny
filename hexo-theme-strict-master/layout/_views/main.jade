@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    include head
+  body
+    header.head
+      h1.head-title.u-fl: a(href = config.root)
+        = config.title
+      include nav
+    main.main
+      block main
+    footer.foot
+      div.foot-copy.u-fl
+        != '&copy; ' + date(new Date(), 'YYYY') + ' ' + (config.author || config.title)
+        if theme.themes_mata
+          bdi
+            != theme.themes_mata
+      block menu
+    include foot

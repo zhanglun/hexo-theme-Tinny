@@ -1,15 +1,15 @@
 doctype html
 if config.language
-	html(lang="#{config.language}")
+    html(lang="#{config.language}")
 else
-	html(lang="en")
+    html(lang="en")
 
 head
-	meta(charset="UTF-8")
-	title Document
-	//link(rel="stylesheet", href="css/font-awesome.min.css")
-	link(rel='stylesheet', href='css/style.css')
+    meta(charset="UTF-8")
+    title Document
+    //link(rel="stylesheet", href="css/font-awesome.min.css")
+    link(rel='stylesheet', href='css/style.css')
 body
-	div(class="wrapper")
-		include _partial/toolbar
-		include _partial/container
+    div(class="wrapper")
+        include _partial/toolbar
+        include _partial/container
