@@ -1,6 +1,7 @@
 //sidebar
 #asidepart
   background color-section
+  font-size 87.5%
   margin 1em 0 0
   padding 0.5em 2% 1em
   box-shadow boxshadow
@@ -13,7 +14,7 @@
 .asidetitle
   font-size 1.1em
   color color-blue
-  background-color color-white
+  background-color color-section
   background-image url(../img/dots-2x.png)
   background-position left bottom
   background-repeat repeat-x
@@ -29,15 +30,14 @@
     width 45%
     float left
     margin 0 5% 0 0
-  @media tablet 
+  @media tablet
     width 100%
     float none
     margin 1em 0 0
-  li 
-
+  li
+    display inline-block
+    margin 0.5em
     a
-      display block
-      padding 0.5em 5%
       &:hover
         color color-theme
 
@@ -48,7 +48,7 @@
     width 45%
     float left
     margin 0 5% 0 0
-  @media tablet 
+  @media tablet
     width 100%
     float none
     margin 1em 0 0
@@ -58,12 +58,12 @@
     float left
     a
       display block
-      margin 0.3125em
-      padding 0.125em 0.3125em
-      background lighten(color-gray, 30%)
+      margin 0.1125em
+      padding 0 0.1125em
+      // background lighten(color-gray, 30%)
       &:hover
         color color-theme
-        background lighten(color-gray, 50%)
+        // background lighten(color-gray, 50%)
 
 //rss
 .rsspart
@@ -73,7 +73,7 @@
     float left
     width 45%
     margin 0 5% 0 0
-  @media tablet 
+  @media tablet
     width 100%
     float none
     margin 1em 0 0
@@ -97,11 +97,11 @@
     width 45%
     float left
     margin 0 5% 0 0
-  @media tablet 
+  @media tablet
     width 100%
     float none
     margin 1em 0 0
-  li 
+  li
     font-size 0.8em
     line-height 2em
     a
@@ -114,13 +114,13 @@
       content "("
     &:after
       content ")"
-          
-.archive-list 
-  padding 0.5em 0 
 
-.archive-float 
+.archive-list
+  padding 0.5em 0
+
+.archive-float
   ul
-    padding 0 
+    padding 0
   li
     float left
     margin 0.3em
@@ -133,7 +133,7 @@
     width 45%
     float left
     margin 0 5% 0 0
-  @media tablet 
+  @media tablet
     width 100%
     float none
     margin 1em 0 0
@@ -148,12 +148,12 @@
 
 //links
 .linkslist
-  margin-top 0.5em 
+  margin-top 0.5em
   @media mini
     width 45%
     float left
     margin 0 5% 0 0
-  @media tablet 
+  @media tablet
     width 100%
     float none
     margin 1em 0 0
@@ -170,7 +170,7 @@
 
 #authorInfo
   overflow hidden
-  text-align center 
+  text-align center
   padding-top 2em
   margin-bottom 1.5em
   background-image url(../img/dots-2x.png)
@@ -193,7 +193,7 @@
   if dataURI
     background no-repeat url(author-img-data) left top
   else
-    background no-repeat url(root+author-img) left top 
+    background no-repeat url(root+author-img) left top
   background-size w w
   border-radius (w/2)
   transition transform 2s ease-out
@@ -245,7 +245,7 @@
     margin 0.5em
     @media mini
       float none
-      margin 0 
+      margin 0
       padding 0.3em
     @media tablet
       float none
@@ -265,10 +265,10 @@
       content "\f09a"
     &[title="qq"]::before
       content: "\f1d6";
- 
+
 
 //back-top
-#back-top 
+#back-top
   display  block
   width  30px
   height  30px
@@ -296,6 +296,6 @@
     transition all 0.4s ease-in-out 0s
   &:hover
     border  6px solid rgba(0, 0, 0, 1)
-  &:hover span 
+  &:hover span
     border-bottom  10px solid rgba(0, 0, 0, 1)
-  
+
