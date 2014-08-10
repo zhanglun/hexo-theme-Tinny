@@ -1,37 +1,35 @@
-title: 项目中遇到的问题(持续更新)
+title: 专业填坑-IE下 A 标签的虚线框和必须要会用的 CSS 选择器
 date: 2014-07-18 20:39
-tags: [CSS, 笔记, 兼容性]
+tags: [CSS, 笔记, 兼容性, 填坑日记]
 ---
-
-###兼容性
-
-####IE 下 a标签的虚线框
+###IE 下 a标签的虚线框
 在 IE 中，点击 a 标签时， a 标签会被加上一个虚线框，很丑！！！！！ 
 
 ![image](http://img3.picbed.org/uploads/2014/07/QQ20140718_1.png)
 
-不同版本的IE解决方案不同：
-
-* IE8 下只需为 a 标签添加一条 CSS 属性就可以 `outline:none`，顺便一提 ，这条属性可以取消浏览器中输入框获得焦点是丑逼逼的外框
+不同版本的IE解决方案不同：IE8 下只需为 a 标签添加一条 CSS 属性就可以 `outline:none`，顺便一提 ，这条属性可以取消浏览器中输入框获得焦点是丑逼逼的外框
 
 ![image](http://img3.picbed.org/uploads/2014/07/QQ20140718_2.png)
 
-* IE7 中，即使是添加了 `outline: none`，虚线框依旧存在，在 HTML 上加 `hidefocus="true"`　如 
+但是在高贵的 IE7 中，即使是添加了 `outline: none`，虚线框依旧存在，在 HTML 上加 `hidefocus="true"`　如 
 
-        <a href="http://www.zhanglun.github.io/" class="active" hidefocus="true">
+    <a href="http://www.zhanglun.github.io/" class="active" hidefocus="true">
 
-####强大的CSS选择器
-项目最低的兼容要求是 IE8 ，所有很多以前由于兼容性问题而不常用的CSS选择器和属性都可以使用。先说说选择器。
+---
+  
+###强大的CSS选择器
 
-#####直接相邻选择器 X+Y
+项目最低的兼容要求是 IE8 ，所有很多以前由于兼容性问题而不常用的CSS选择器和属性都可以使用。下面记录的都是以前基本上没有用到的但是却很有用的选择器，就拿属性选择器来说，简直遍地都是。
+
+#####直接相邻选择器 X+Y （兼容浏览器：IE7+、Firefox、Chrome、Safari、Opera）
     
     ul + p {
         color: red;
     } 
 
 匹配在ul后面的第一个p，将段落内的文字颜色设置为红色。(只匹配第一个元素)。  
-兼容浏览器：IE7+、Firefox、Chrome、Safari、Opera
-#####子选择器 X>Y
+
+#####子选择器 X>Y （兼容浏览器：IE7+、Firefox、Chrome、Safari、Opera）
     
     div#container > ul {
         border: 1px solid black;
@@ -51,59 +49,53 @@ tags: [CSS, 笔记, 兼容性]
     </div>
     
 与后代选择器X Y不同的是，子选择器只对X下的**直接子级Y**起作用。在上面的css和html例子中，div#container>ul仅对container中**最近一级的ul**起作用(即拥有类名 son 的 ul)。  
-兼容浏览器：IE7+、Firefox、Chrome、Safari、Opera
 
-####间接相邻选择器 X ~ Y
+
+####间接相邻选择器 X ~ Y （兼容浏览器：IE7+、Firefox、Chrome、Safari、Opera  ）
     ul ~ p {
         color: red;
     }
-与前面提到的 X+Y 不同的是，X~Y 匹配与 X **相同级别的所有Y元素**，而**X+Y只匹配第一个**。   兼容浏览器：IE7+、Firefox、Chrome、Safari、Opera  
+与前面提到的 X+Y 不同的是，X~Y 匹配与 X **相同级别的所有Y元素**，而**X+Y只匹配第一个**。   
 
-####属性选择器
+这些选择器，给人的感觉是根据 HTML 的结构来选择对应的元素，比如说：选择在页面中相邻的元素；根据父元素选择子元素，或者兄弟元素，都依赖着结构，利用A去寻找B。下面说的 **属性选择器** 给人的感觉就不太一样
 
-#####X[title]
+####属性选择器 （兼容浏览器：IE7+、Firefox、Chrome、Safari、Opera）
+
+#####X[title]——匹配的是带有 **title** 属性的链接元素  
     
     a[title] {
         color: green;
     }
   
-上述代码匹配的是带有 **title** 属性的链接元素。  
-兼容浏览器：IE7+、Firefox、Chrome、Safari、Opera
 
-#####X[title="foo"]
+#####X[title="foo"]——匹配所有拥有href属性，且**href为http://css9.net**的所有链接
+
     a[href="http://css9.net"] {
         color: #1f6053; 
     }
 
-匹配所有拥有href属性，且**href为http://css9.net**的所有链接。  
-兼容浏览器：IE7+、Firefox、Chrome、Safari、Opera
-
-#####X[title*="css9.net"]
+#####X[title*="zhanglun"]——匹配的是href中**包含"zhanglun"**的所有链接
     a[href*="css9.net"] {
         color: #1f6053;
     }
-匹配的是href中**包含"css9.net"**的所有链接。  
-兼容浏览器：IE7+、Firefox、Chrome、Safari、Opera
+  
 
-#####X[href^="http"]
+#####X[href^="http"]——匹配的是href中**所有以http开头**的链接
 
     a[href^="http"] {
         background: url(path/to/external/icon.png) no-repeat;
         padding-left: 10px;
     }
     
-匹配的是href中**所有以http开头**的链接。   
-兼容浏览器：IE7+、Firefox、Chrome、Safari、Opera
 
-#####X[href$=".jpg"]
+#####X[href$=".jpg"]——匹配的是**所有链接到扩展名为.jpg图片的链接**
+
     a[href^="http"] {
         background: url(path/to/external/icon.png) no-repeat;
         padding-left: 10px;
-    } 
-匹配结尾为特定字符串的元素。在上面代码中匹配的是**所有链接到扩展名为.jpg图片的链接**。  
-兼容浏览器：IE7+、Firefox、Chrome、Safari、Opera
+    }   
 
-#####X[data-*="foo"]
+#####X[data-*="foo"]——匹配属性 data-* 为 "foo" 的元素
 
 在上一个选择器中提到如何匹配所有图片链接。如果使用X[href$=".jpg"]实现，需要这样做：
     
@@ -125,10 +117,9 @@ tags: [CSS, 笔记, 兼容性]
     }
     
 这样所有链接到图片的链接字体颜色为红色。  
-兼容浏览器：IE7+、Firefox、Chrome、Safari、Opera
-#####X[foo~="bar"]
-波浪线符号可以让我们匹配属性值中用空格分隔的多个值中的一个。看下面例子：
-    
+
+#####X[foo~="bar"]——匹配属性值中用空格分隔的多个值中的一个
+
     html代码
     <a href="path/to/image.jpg" data-info="external image"> Click Me, Fool </a> 
     
