@@ -13,15 +13,18 @@
 .asidetitle
   font-size 1.1em
   color color-blue
-  background-color color-white
+  background-color color-section
   background-image url(../img/dots-2x.png)
   background-position left bottom
   background-repeat repeat-x
   background-size 5px auto
   padding 0 0 0.3125em 0
+  margin 0 0 0.4em 0
     &:hover
       color color-theme
       transition color .5s
+  a
+    color color-blue
 
 //categories
 .categorieslist
@@ -34,10 +37,9 @@
     float none
     margin 1em 0 0
   li 
-
+    display inline-block
+    margin 0.4em 0.5em 0
     a
-      display block
-      padding 0.5em 5%
       &:hover
         color color-theme
 
@@ -58,12 +60,10 @@
     float left
     a
       display block
-      margin 0.3125em
-      padding 0.125em 0.3125em
-      background lighten(color-gray, 30%)
+      margin 0.1125em
+      padding 0 0.1125em
       &:hover
         color color-theme
-        background lighten(color-gray, 50%)
 
 //rss
 .rsspart

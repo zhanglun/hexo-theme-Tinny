@@ -1,7 +1,10 @@
 ##### Menu
 menu:
-  Home: /
-  Archives: /archives
+  首页: /
+  归档: /archives
+  博客园: http://www.cnblogs.com/zhanglun/
+  Page: http://zhanglun.github.io/
+  关于我: http://ncuey.sinaapp.com/CrispElite/
 ## you can create `tags` and `categories` folders in `../source`.
 ## And create a `index.md` file in each of them.
 ## set `front-matter`as
@@ -21,7 +24,7 @@ widgets:
 - archive
 - tag
 
-excerpt_link: read more
+excerpt_link: 阅读更多
 
 ## provide six widgets:category,tag,rss,archive,tagcloud,links.
 ## modify links in `/layout/_widget/links.ejs`.
@@ -76,7 +79,7 @@ author:
 
 #### Comment
 duoshuo: 
-  enable: true  ## duoshuo.com
+  enable: false  ## duoshuo.com
   short_name:    ## duoshuo short name.
 
 #### Share button

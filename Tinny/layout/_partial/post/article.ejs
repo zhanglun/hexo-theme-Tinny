@@ -3,7 +3,7 @@
 		<%- partial('header') %>
 	<div class="article-content">
 		<%- partial('gallery') %>
-		<% if( table&&(item.toc !== false) && theme.toc.article){ %>
+		<% if(table&&(item.toc !== false) && theme.toc.article){ %>
 		<div id="toc" class="toc-article">
 			<strong class="toc-title"><%= __('contents') %></strong>
 		<%- toc(item.content) %>
