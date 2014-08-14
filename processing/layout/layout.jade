@@ -4,12 +4,107 @@ if config.language
 else
     html(lang="en")
 
-head
-    meta(charset="UTF-8")
-    title Document
-    //link(rel="stylesheet", href="css/font-awesome.min.css")
-    link(rel='stylesheet', href='css/style.css')
+include _partial/head
+
 body
     div(class="wrapper")
         include _partial/toolbar
         include _partial/container
+
+
+
+//if (page.layout=='post')
+//    //- include '_partial/head
+//    body
+//        header
+//                - partial('_partial/header')
+//            </header>
+//            <div id="container" class="clearfix">
+//                - body
+//                - partial('_partial/sidebar',{itemz: page,table: true})
+//            </div>
+//            <footer>- partial('_partial/footer')</footer>
+//            - partial('_partial/after_footer')
+//        </body>
+//</html>
+//else if(page.layout=='page'){
+//     if(page.source.match(/\.md$/)){
+//        - partial('_partial/head')
+//            <body>
+//                <header>
+//                    - partial('_partial/header')
+//                </header>
+//                <div id="container" class="clearfix">
+//                    - body
+//                </div>
+//                <footer>- partial('_partial/footer')</footer>
+//                - partial('_partial/after_footer')
+//            </body>
+//            </html>
+//             }else{
+//        - page.content
+//     }
+// } else if(page.layout=='search'){
+//    - partial('_partial/head')
+//        <body>
+//            <header>
+//                - partial('_partial/header')
+//            </header>
+//            <div id="container" class="clearfix">
+//                - partial('_partial/search'
+//            </div>
+//            - partial('_partial/after_footer')
+//        </body>
+//        </html>
+// } else if(page.layout=='tags'){
+//    - partial('_partial/head')
+//        <body>
+//            <header>
+//                - partial('_partial/header')
+//            </header>
+//            <div id="container" class="clearfix">
+//                - partial('_partial/tags'
+//            </div>
+//            - partial('_partial/after_footer')
+//        </body>
+//        </html>
+// } else if(page.layout=='categories'){
+//    - partial('_partial/head')
+//        <body>
+//            <header>
+//                - partial('_partial/header')
+//            </header>
+//            <div id="container" class="clearfix">
+//                - partial('_partial/categories'
+//            </div>
+//            - partial('_partial/after_footer')
+//        </body>
+//        </html>
+// } else if(page.category!=null||page.tag!=null||page.archive!=null) {
+//    - partial('_partial/head')
+//        <body>
+//            <header>
+//                - partial('_partial/header')
+//            </header>
+//            <div id="container" class="clearfix">
+//                - body
+//            </div>
+//            <footer>- partial('_partial/footer')</footer>
+//            - partial('_partial/after_footer')
+//        </body>
+//        </html>
+// } else {
+//    - partial('_partial/head')
+//        <body>
+//            <header>
+//                - partial('_partial/header')
+//            </header>
+//            <div id="container" class="clearfix">
+//                - body
+//                - partial('_partial/sidebar',{item: page,table: false})
+//            </div>
+//            <footer>- partial('_partial/footer')</footer>
+//            - partial('_partial/after_footer')
+//        </body>
+//    </html>
+// }

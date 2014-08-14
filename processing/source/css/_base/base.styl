@@ -7,7 +7,7 @@ html, body {
   background-color: #ffffff;
   -ms-word-wrap: break-word;
   word-wrap: break-word;
-  font-family: Helvetica, Tahoma, Arial,"Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", sans-serif;
+  font-family: Helvetica, Tahoma, Arial, "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", sans-serif;
 }
 
 body {
@@ -64,11 +64,25 @@ li {
 
 #main {
   margin-left: nav-width + 50px;
+  font-size:1.4em;
 }
 
+// footer
+
 #footer {
+  margin-top:20em;
   padding: 1px;
   clear: both;
+  .site-info {
+    width: 100%;
+    padding: 20px 0 40px;
+    background: #ffffff;
+    border-top: 5px solid #333333;
+    font-size: 12px;
+    line-height: 20px;
+    color: #aaaaaa;
+    position: relative;
+  }
 }
 
 // widget
@@ -113,10 +127,7 @@ li {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
-  -webkit-transition: background 0.2s;
-  -moz-transition: background 0.2s;
-  -o-transition: background 0.2s;
-  transition: background 0.2s;
+  transition(background 0.2s);
   &:hover {
     background-color: #7cc576;
     text-decoration: none;
@@ -136,7 +147,6 @@ li {
   margin-top: 30px;
   display: block;
 }
-
 
 .icon-file-text:before {
   content: "\f15c";

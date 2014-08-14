@@ -1,0 +1,8 @@
+
+//博客详情页中底部的上/下一页
+
+nav#article-pagination
+    if (page.prev)
+        a(href="#{config.root}#{page.prev_link}" title="__('prev')" class="prevpage")= __('prev')
+    if (page.next)
+        a(href="#{config.root}#{page.next_link}" title="__('next')" class="nextpage")= __('next')

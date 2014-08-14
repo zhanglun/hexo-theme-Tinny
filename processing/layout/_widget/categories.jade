@@ -3,5 +3,5 @@ aside(id="site-categories" class="widget widget-categories")
 	ul
 		-site.categories.sort("name").each(function(item){
 			li(class="cat-item")
-				a(href="#{config.root}categories/#{item.name}")=item.name
+				a(href=config.root+item.path)=item.name
 		-})
