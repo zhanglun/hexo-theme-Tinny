@@ -1,8 +1,16 @@
 
 //博客详情页中底部的上/下一页
 
-nav#article-pagination
+nav#article-pagination.pager
     if (page.prev)
-        a(href="#{config.root}#{page.prev_link}" title="__('prev')" class="prevpage")= __('prev')
+        div(class="nav-previous")
+            a(href="#{config.root}#{page.prev_link}" title=__('prev') class="prevpage")
+                span(class="meta-nav btn")
+                    i(class="icon-chevron-left")
+                span(class="pager-title") Take Advantage Of The Stock Market
     if (page.next)
-        a(href="#{config.root}#{page.next_link}" title="__('next')" class="nextpage")= __('next')
+        div(class="nav-next")
+            a(href="#{config.root}#{page.next_link}" title=__('next') class="nextpage")
+                span(class="meta-nav btn")
+                    i(class="icon-chevron-right")
+                span(class="pager-title") Take Advantage Of The Stock Market

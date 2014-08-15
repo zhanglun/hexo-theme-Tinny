@@ -65,3 +65,101 @@
     margin: 2px;
   }
 }
+
+.pager {
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  position: relative;
+  padding: 40px 0;
+  .disabled {
+    background: #444444;
+  }
+
+  .btn {
+    padding: 5px 12px;
+  }
+
+  .nav-next {
+    float: right;
+    width: 50%;
+    text-align: right;
+  }
+
+  .nav-next .btn {
+    float: right;
+  }
+  .pager-title {
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    font-size: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 35px;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .nav-next .pager-title {
+
+    float: right;
+    margin-right: -33px;
+    padding: 0 53px 0 20px;
+  }
+  .nav-previous .pager-title {
+    float: left;
+    margin-left: -33px;
+    padding: 0 20px 0 53px;
+  }
+
+  .nav-previous {
+    float: left;
+    width: 50%;
+  }
+
+  .nav-next {
+    float: right;
+    width: 50%;
+    text-align: right;
+  }
+
+  .nav-previous .btn {
+    float: left;
+  }
+
+  .nav-previous .pager-title {
+    float: left;
+    margin-left: -33px;
+    padding: 0 20px 0 53px;
+  }
+
+  .nav-next .btn,
+  .nav-previous .btn {
+    font-size: 14px;
+    line-height: 25px;
+  }
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+  &:before {
+    display: block;
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    background: #e5e5e5;
+    top: 0;
+    left: 50%;
+  }
+
+}
+
+
