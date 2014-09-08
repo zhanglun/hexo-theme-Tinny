@@ -69,11 +69,11 @@ fancybox: false
 #### Author information
 author:
   google_plus:    ## eg:116338260303228776998 for https://plus.google.com/u/0/116338260303228776998
-  intro_line1:    ## eg: "Hello ,I'm Larry Page in Google."
+  intro_line1: '人穷志短愿望多'    ## eg: "Hello ,I'm Larry Page in Google."
   intro_line2:    ## eg: "This is my blog,believe it or not."
-  weibo:          ## e.g. 436062867 for http://weibo.com/436062867
+  weibo: '2671026564'         ## e.g. 436062867 for http://weibo.com/436062867
   twitter:        ## e.g. yangjiansky for https://twitter.com/yangjiansky
-  github:         ## e.g. A-limon for https://github.com/A-limon
+  github: 'https://github.com/zhanglun'      ## e.g. A-limon for https://github.com/A-limon
   facebook:       ## e.g. yangjian for https://favebook.com/yangjian
   tsina:          ## e.g. 1664838973  Your weibo ID,It will be used in share button.
 
