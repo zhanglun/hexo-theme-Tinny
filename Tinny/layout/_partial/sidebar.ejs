@@ -9,10 +9,14 @@
 	<% if(theme.author_img_enable == true){ %>
 		<div class="author-logo"></div>		
 	<% } %>
-	<% if(theme.author.intro_line1&&theme.author.intro_line2){ %>
+	<% if(theme.author.intro_line1 || theme.author.intro_line2){ %>
 	<section class="author-info">
-		<p> <%= theme.author.intro_line1 %></p>
-		<p>	<%= theme.author.intro_line2 %></p>
+		<% if(theme.author.intro_line1){ %>
+			<p> <%= theme.author.intro_line1 %></p>
+		<% } %>
+		<% if(theme.author.intro_line2){ %>
+			<p>	<%= theme.author.intro_line2 %></p>
+		<% } %>
 	</section>
 	 <% } %>
 	<div class="social-font" class="clearfix">
