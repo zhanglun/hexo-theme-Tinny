@@ -27,8 +27,8 @@ p {
 
 a {
   text-decoration: none;
-  transition(all, 0.3s);
-  color: gray3;
+  @include transition(all, 0.3s);
+  color: $gray3;
 }
 
 ul {
@@ -53,7 +53,7 @@ li {
 .wrapper {
   height: 100%;
   width: 100%;
-  padding-left:site-action;
+  padding-left:$site-action;
 }
 
 #container {
@@ -64,7 +64,7 @@ li {
 }
 
 #main {
-  margin-left: nav-width + 50px;
+  margin-left: $nav-width + 50px;
   font-size: 1.4em;
 }
 
@@ -128,7 +128,7 @@ li {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
-  transition(background 0.2s);
+  @include transition(background 0.2s);
   &:hover {
     background-color: #7cc576;
     text-decoration: none;
