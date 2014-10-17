@@ -1,24 +1,18 @@
 div(id="main")
     include article_meta
     p #{page.posts}
-    -page.posts.each(function(item,i){
-        -if(i==1){
-            p= item
-            break
-        -}
-    -});
-    //include article
-    p= page.total
-    -for(var key in page){
-        p
-            span= key
-            span -----
-            span= page[key]
-            span -----
-            span= typeof page[key]
-    -}
-
-    p page.layout
-    p= page.layout
+    ////include article
+    //p= page.total
+    //-for(var key in page){
+    //    p
+    //        span= key
+    //        span -----
+    //        span= page[key]
+    //        span -----
+    //        span= typeof page[key]
+    //-}
+    //
+    //p page.layout
+    //p= page.layout
 
     include pagination
