@@ -1,3 +1,29 @@
+## 参考文章
+[http://my.oschina.net/youxiachai/blog/121659](http://my.oschina.net/youxiachai/blog/121659) 包含详细的参数介绍
+
+### site
+```js
+{
+    "posts":"所有文章，根据发表日期降序排列 Collection事件",
+    "pages":"所有页面，根据发表日期降序排列 Collection事件",
+    "categories":"所有分类，根据字母顺序排列, Taxonomy 事件",
+    "tags":"所有标签，根据字母顺序排列 Taxonomy 事件"
+}
+```
+
+例如获取所有文章标题:
+
+    <% site.posts.each(function(item){ %> <br /><%= item.title%> <br /><% }); %>
+
+
+
+
+
+
+
+
+
+
 ##引用 _config.yml 中的变量
 
     //引用主题的 `_config.yml` 中的 `menu`
