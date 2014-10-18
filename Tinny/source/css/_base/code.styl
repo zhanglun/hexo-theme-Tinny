@@ -1,7 +1,7 @@
 // More theme here http//softwaremaniacs.org/media/soft/highlight/test.html
 // Just change those colors
 // https//github.com/chriskempson/tomorrow-theme
-highlight-background = #eee
+highlight-background = #2d2d2d
 highlight-current-line = #393939
 highlight-selection = #515151
 highlight-foreground = #cccccc
@@ -23,43 +23,26 @@ $code-block
   line-height line-height
   font-size font-size
 
-  background #eee
-  color #666
-  padding 0 5px
-  margin 0 2px
-  font-size 0.9em
-  border 1px solid color-border
-  border-radius 3px
-
 $line-numbers
-  color highlight-line-numbers 
+  color highlight-line-numbers
   font-size 0.85em
   line-height line-height
   font-size font-size
 
-.article-content   
+.article-content
   pre
-    background: #eee;
-    background: rgba(234,239,242,.25) url(../img/blueprint-dark.png) top center;
-    border-left: 6px solid rgba(0,83,159,.65);
-    margin-top: 15px;
-    overflow: auto;
-    padding: 7px 15px;
-    -webkit-border-radius: 2px;
-    border-radius: 2px;
     font-family font-mono
     @extend $code-block
     code
-      background none
-      text-shadow none
-      padding 0
-      word-wrap break-word
+    background none
+    text-shadow none
+    padding 0
   .highlight
     @extend $code-block
     pre
-      border none
-      margin 0
-      padding 0
+    border none
+    margin 0
+    padding 0
     table
       margin 0
       width auto
@@ -115,86 +98,60 @@ $line-numbers
           &:hover
             color color-theme
 
-// pre
-//   .comment
-//     color highlight-comment
-//   .title
-//   .variable
-//   .attribute
-//   .tag
-//   .regexp
-//   .ruby .constant
-//   .tag .title
-//   .pi
-//   .doctype
-//   .doctype
-//   .id
-//   .class
-//   .pseudo 
-//     color highlight-red
-//   .number
-//   .preprocessor
-//   .pragma
-//   .built_in
-//   .literal
-//   .params
-//   .constant 
-//     color highlight-orange
-//   .class .title  
-//   .rules .attribute
-//     color highlight-yellow
-//   .string
-//   .value
-//   .inheritance
-//   .header
-//   .symbol
-//   .cdata
-//     color highlight-green
-//   .css .hexcolor 
-//     color highlight-aqua
-//   .function
-//   .function .title
-//   .decorator
-//   .python .title
-//   .title .keyword
-//   .perl .sub
-//   .javascript .title
-//   .coffeescript .title
-//     color highlight-blue
-//   .keyword
-//   .javascript .function 
-//     color highlight-purple
-//   .coffeescript .javascript
-//   .javascript .xml
-//   .tex .formula
-//   .xml .javascript
-//   .xml .vbscript
-//   .xml .css
-//   .xml .cdata 
-//     opacity 0.5
-
-code[class*=language-],pre[class*=language-]
-  color: inherit;
-  text-shadow: none
-
-pre[class*=language-]
-  margin: 0 0 24px
-
-pre[class*=language-] span.comment
-  display: inherit
-.error pre[class*=language-]
-  margin: 10px 0 0;
-  background: 0 0
-
-:not(pre)>code[class*=language-],pre[class*=language-]
-  background: rgba(234,239,242,.25) url(/media/redesign/img/blueprint-dark.png) top center;
-  border-left: 6px solid rgba(0,83,159,.65)
-
-pre em code[class*=language-]
-  border-left: 0;
-  background: 0 0
-
-pre[class*=language-].syntaxbox,pre[class*=language-].twopartsyntaxbox
-  background: rgba(212,221,228,.5);
-  margin-bottom: 0
-
+pre
+  .comment
+    color highlight-comment
+  .title
+  .variable
+  .attribute
+  .tag
+  .regexp
+  .ruby .constant
+  .tag .title
+  .pi
+  .doctype
+  .doctype
+  .id
+  .class
+  .pseudo
+    color highlight-red
+  .number
+  .preprocessor
+  .pragma
+  .built_in
+  .literal
+  .params
+  .constant
+    color highlight-orange
+  .class .title
+  .rules .attribute
+    color highlight-yellow
+  .string
+  .value
+  .inheritance
+  .header
+  .symbol
+  .cdata
+    color highlight-green
+  .css .hexcolor
+    color highlight-aqua
+  .function
+  .function .title
+  .decorator
+  .python .title
+  .title .keyword
+  .perl .sub
+  .javascript .title
+  .coffeescript .title
+    color highlight-blue
+  .keyword
+  .javascript .function
+    color highlight-purple
+  .coffeescript .javascript
+  .javascript .xml
+  .tex .formula
+  .xml .javascript
+  .xml .vbscript
+  .xml .css
+  .xml .cdata
+    opacity 0.5
