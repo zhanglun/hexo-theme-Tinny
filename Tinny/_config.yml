@@ -66,6 +66,17 @@ fancybox: false
 ## if you want use fancybox in ANY post please copy the file `fancybox.js`.
 ## in theme folder `/Tinny/scripts` to your hexo blog folder `../scritps`.
 
+#### highgLight.js
+
+colorscheme:
+  enable: true
+  color: railscasts
+## more color scheme here: https://highlightjs.org/static/test.html
+## you can find more colorscheme here: http://www.bootcdn.cn/highlight.js/
+## set "highlight" in hexo's _config to false before setting colorscheme
+
+
+
 #### Author information
 author:
   google_plus:    ## eg:116338260303228776998 for https://plus.google.com/u/0/116338260303228776998
