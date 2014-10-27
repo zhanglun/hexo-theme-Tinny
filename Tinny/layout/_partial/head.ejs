@@ -52,4 +52,7 @@
     <link rel="apple-touch-icon-precomposed" href="<%- config.root %><%- theme.apple_icon %>">
     <% } %>
     <%- css('css/style') %>
+	<% if(theme.colorscheme.enable) {%>
+	<link href="http://cdn.bootcss.com/highlight.js/8.2/styles/<%- theme.colorscheme.color%>.min.css" rel="stylesheet">
+	<% } %>
 </head>

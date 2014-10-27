@@ -1,0 +1,44 @@
+// Size
+
+$site-action = 50px;
+$height100p = 100%;
+$nav-width = 180px;
+// Grays
+// -------------------------
+$black = #000;
+$gray1 = #111;
+$gray2 = #222;
+$gray3 = #333;
+$gray4 = #444;
+$gray5 = #666;
+$gray6 = #999;
+$gray7 = #aaa;
+$gray8 = #ddd;
+$gray9 = #e5e5e5;
+$gray10 = #f5f5f5;
+$white = #fff;
+// Accent colors
+// -------------------------
+$primary-color = #7cc576;
+// Links
+// -------------------------
+$linkColor = $gray3;
+$linkColorHover = $primary-color;
+
+// Buttons
+// -------------------------
+$btnBackground = $linkColor;
+
+$btnBackgroundHover = $linkColorHover;
+
+$btnPrimaryBackground = #1abc9c;
+
+$btnInfoBackground = #3498db;
+
+$btnSuccessBackground = $primary-color;
+
+$btnWarningBackground = #f1c40f;
+
+$btnDangerBackground = #e74c3c;
+
+$btnInverseBackground = #34495e;
