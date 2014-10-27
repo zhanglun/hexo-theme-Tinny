@@ -1,5 +1,20 @@
 div(id="toolbar")
-    ul
-        each item,index in ['foo', 'bar', 'baz']
-            li= item + index
-        li Last Li
+    ul(class="social-font")
+        -var authors = theme.author
+        if authors.google_plus
+            li
+                a(href="https://github.com/#{authors.github}" target="_blank" title="github")
+
+        if authors.weibo
+            li
+                a(href="http://weibo.com/#{theme.author.weibo" target="_blank" title="weibo")
+        if authors.twitter
+            li
+                a(href="https://twitter.com/#{authors.twitter}" target="_blank" title="twitter")
+
+        if authors.github
+            li
+                a(href="https://github.com/#{authors.github}" target="_blank" title="github")
+        if authors.facebook
+            li
+                a(href="https://www.facebook.com/#{authors.facebook}" target="_blank" title="facebook")

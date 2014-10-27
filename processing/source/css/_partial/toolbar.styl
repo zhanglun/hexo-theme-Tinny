@@ -12,3 +12,58 @@
     padding:0;
   }
 }
+
+.social-font {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  float: left;
+  text-align: center;
+  @media tablet{
+    float: none;
+    width: auto;
+    padding: 0;
+    background: #343434;
+  }
+  a {
+    display: inline-block;
+    width: 100%;
+    color: #444444;
+    font-size: font-size + 20;
+    text-align: center;
+    padding:0.5em 0;
+    transition(all 0.2s ease-in-out);
+    @media mini{
+      float: none;
+      margin: 0;
+      padding: 0.3em;
+    }
+    @media tablet{
+      float: none;
+      padding: 0.3em;
+    }
+    &:hover{
+      color:#fff;
+      background: #111111;
+    }
+    &:hover:before{
+      color: color-blue;
+    }
+    &[title="weibo"]::before, &[title="twitter"]::before, &[title="github"]::before, &[title="facebook"]::before{
+      font-family: font-icon-family;
+      font-smoothing();
+    }
+    &[title="weibo"]::before{
+      content: "\f18a";
+    }
+    &[title="twitter"]::before{
+      content: "\f099";
+    }
+    &[title="github"]::before{
+      content: "\f09b";
+    }
+    &[title="facebook"]::before{
+      content: "\f09a";
+    }
+  }
+}

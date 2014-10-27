@@ -1,10 +1,10 @@
 ##### Menu
 menu:
-  首页: #
-  归档: http://www.baidu.com
-  关于: http://ncuey.sinaapp.com/CrispElite/
-  github: https://github.com/zhanglun
-  博客园: http://www.cnblogs.com/zhanglun/
+  Home: #
+  Archives: http://www.baidu.com
+  About: http://ncuey.sinaapp.com/CrispElite/
+  Github: https://github.com/zhanglun
+  Blogs: http://www.cnblogs.com/zhanglun/
 ## you can create `tags` and `categories` folders in `../source`.
 ## And create a `index.md` file in each of them.
 ## set `front-matter`as
@@ -72,7 +72,7 @@ author:
   intro_line2: This is my blog,believe it or not. ## eg: "This is my blog,believe it or not."
   weibo: 436062867       ## e.g. 436062867 for http://weibo.com/436062867
   twitter: yangjiansky     ## e.g. yangjiansky for https://twitter.com/yangjiansky
-  github:       ## e.g. A-limon for https://github.com/A-limon
+  github: zhanglun      ## e.g. A-limon for https://github.com/A-limon
   facebook:     ## e.g. yangjian for https://favebook.com/yangjian
   tsina:        ## e.g. 1664838973  Your weibo ID,It will be used in share button.
 
