@@ -1,7 +1,7 @@
 
 //博客详情页中底部的上/下一页
 
-nav#article-pagination.pager
+div(class="article-pagination pager")
     if (page.prev)
         div(class="nav-previous")
             a(href="#{config.root}#{page.prev_link}" title=__('prev') class="prevpage")

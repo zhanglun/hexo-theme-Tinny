@@ -1,6 +1,10 @@
 #navigation {
   float: left;
   width: nav-width;
+  transform(translate(-150%,0));
+  &.action{
+
+  }
   a {
     color: #333;
     &:hover {
@@ -8,6 +12,16 @@
       text-decoration: underline;
     }
   }
+  @media phone{
+
+  }
+  @media tablet{
+
+  }
+  @media desktop{
+    transform(translate(0,0));
+  }
+
 }
 
 #site-header {
@@ -42,6 +56,9 @@
   }
 }
 
+
+// 组件
+
 .widget {
   font-size: 1.4em;
 }
@@ -66,6 +83,8 @@
   }
 }
 
+
+// 文章翻页
 .pager {
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
