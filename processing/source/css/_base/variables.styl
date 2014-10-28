@@ -48,14 +48,17 @@ btnInverseBackground = #34495e;
 
 
 //Media
-width-phone = 568px
-width-mini = 768px
-width-tablet = 1024px
-width-desktop = 1560px
-phone = "only screen and (min-width: " + width-phone + ")"
-mini= "only screen and (min-width: " + width-mini + ")"
-tablet = "only screen and (min-width: " + width-tablet + ")" // 大于 平板
-desktop = "only screen and (min-width: " + width-desktop + ")" // 大于桌面
+width-phone = 320px;
+width-reader = 481px;
+width-tablet = 641px;
+width-desktop = 961px;
+/*@media (min-width:1025px) { *//* big landscape tablets, laptops, and desktops *//* }*/
+/*@media (min-width:1281px) { *//* hi-res laptops and desktops *//* }*/
+
+phone = "only screen and (min-width: " + width-phone + ")";
+mini= "only screen and (min-width: " + width-reader + ")";
+tablet = "only screen and (min-width: " + width-tablet + ")";
+desktop = "only screen and (min-width: " + width-desktop + ")";
 
 
 
