@@ -1,4 +1,6 @@
 div(class="container")
-	include navigation
-	!{body}
-	include footer
+    include navigation
+    div(class="main")
+        !{body}
+        include pagination
+    include footer
