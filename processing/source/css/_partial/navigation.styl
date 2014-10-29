@@ -1,10 +1,7 @@
 #navigation {
   float: left;
   width: nav-width;
-  transform(translate(-150%,0));
-  &.action{
-
-  }
+  transform(translate(-150%, 0));
   a {
     color: #333;
     &:hover {
@@ -12,14 +9,14 @@
       text-decoration: underline;
     }
   }
-  @media phone{
+  @media phone {
 
   }
-  @media tablet{
+  @media tablet {
 
   }
-  @media desktop{
-    transform(translate(0,0));
+  @media desktop {
+    transform(translate(0, 0));
   }
 
 }
@@ -56,7 +53,6 @@
   }
 }
 
-
 // 组件
 
 .widget {
@@ -83,7 +79,6 @@
   }
 }
 
-
 // 文章翻页
 .pager {
   border-top: 1px solid #e5e5e5;
@@ -95,22 +90,15 @@
   }
 
   .btn {
+    display: inline-block;
     padding: 5px 12px;
-  }
-
-  .nav-next {
-    float: right;
-    width: 50%;
-    text-align: right;
-  }
-
-  .nav-next .btn {
-    float: right;
+    box-sizing(border-box);
+    width:33px;
+    height:35px;
   }
   .pager-title {
-    font-family: 'Roboto Slab', serif;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 1.5em;
     display: inline-block;
     vertical-align: middle;
     line-height: 35px;
@@ -122,44 +110,43 @@
     text-overflow: ellipsis;
     white-space: nowrap;
   }
-  .nav-next .pager-title {
-
-    float: right;
-    margin-right: -33px;
-    padding: 0 53px 0 20px;
-  }
-  .nav-previous .pager-title {
-    float: left;
-    margin-left: -33px;
-    padding: 0 20px 0 53px;
-  }
-
-  .nav-previous {
-    float: left;
-    width: 50%;
-  }
 
   .nav-next {
     float: right;
     width: 50%;
     text-align: right;
+    .pager-title {
+      margin-right: -33px;
+      padding: 0 53px 0 20px;
+    }
   }
 
-  .nav-previous .btn {
+  .nav-previous {
     float: left;
+    width: 50%;
+    .pager-title {
+      margin-left: -33px;
+      padding: 0 20px 0 53px;
+    }
+
   }
 
-  .nav-previous .pager-title {
-    float: left;
-    margin-left: -33px;
-    padding: 0 20px 0 53px;
+  .nav-next, .nav-previous{
+    a:hover {
+      color: primary-color;
+      text-decoration: underline;
+    }
+    a:hover .btn{
+      background-color: #7cc576;
+      text-decoration: none;
+      color: #ffffff;
+  }
+    .btn {
+      font-size: 14px;
+      line-height: 25px;
+    }
   }
 
-  .nav-next .btn,
-  .nav-previous .btn {
-    font-size: 14px;
-    line-height: 25px;
-  }
   &:before,
   &:after {
     display: table;

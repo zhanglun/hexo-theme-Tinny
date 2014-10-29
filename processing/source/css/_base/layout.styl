@@ -6,7 +6,7 @@
 .container {
   width: 100%;
   overflow: hidden;
-  padding: 60px 1em 0;
+  padding: 80px 1em 0;
   box-sizing(border-box);
   @media phone{
 
@@ -21,6 +21,10 @@
 }
 
 .main {
+  overflow:hidden;
+  @media phone{
+    margin-left:- nav-width* 0.5;
+  }
   @media desktop{
     margin-left: nav-width + 50px;
   }
@@ -32,7 +36,7 @@
 
 // footer
 #footer {
-  margin-top: 20em;
+  margin-top: 1.6em;
   padding: 1px;
   clear: both;
   .site-info {

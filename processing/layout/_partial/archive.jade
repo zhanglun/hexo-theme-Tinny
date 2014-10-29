@@ -22,15 +22,15 @@ div(class="archive-header")
 section(class="article-list archive-page")
     -page.posts.each(function(item){
     article
-        header(class="entry-header")
-            h2(class="entry-title")
+        header(class="article-header")
+            h2(class="article-title")
                 a(href="#{config.root}#{item.path}")= item.title
-            div(class="entry-meta")
+            div(class="article-meta")
                 span(class="sep")
                 span(class="posted-on")
                     i(class="icon-calendar-empty")
-                    time(class="entry-date published" datetime="#{item.updated}")= item.date.format(config.date_format)
-        div(class="entry-content")
+                    time(class="article-date published" datetime="#{item.updated}")= item.date.format(config.date_format)
+        div(class="article-content")
             if item.description
                 p(itemprop="description")= item.description
             else if item.excerpt

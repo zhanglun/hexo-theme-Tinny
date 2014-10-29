@@ -1,10 +1,10 @@
 section(class="article-list")
     -page.posts.each(function(item){
     article
-        header(class="entry-header")
-            h2(class="entry-title")
+        header(class="article-header")
+            h2(class="article-title")
                 a(href="#{item.path}")= item.title
-            div(class="entry-meta")
+            div(class="article-meta")
                 //span(class="byline") By
                     span(class="author vcard")
                         a(class="url fn n" href="http://demo.designwall.com/dw-minion/?author=9" title="View all posts by Ruth Clem")  Ruth Clem
@@ -19,7 +19,7 @@ section(class="article-list")
                         i(class="icon-file-text")
                 span(class="posted-on")
                     i(class="icon-calendar-empty")
-                    time(class="entry-date published" datetime="#{item.updated}")= item.date.format(config.date_format)
+                    time(class="article-date published" datetime="#{item.updated}")= item.date.format(config.date_format)
                     //span(class="comments-link")
                     //    a(href="http://demo.designwall.com/dw-minion/?p=33#comments" title="Comment on The Inside Secrets Of Millionaires Under The Age Of 29")
                     //        i(class="icon-comment-alt")
@@ -27,7 +27,7 @@ section(class="article-list")
         //div(class="entry-thumbnail")
         //    a(href="http://www.baidu.com/")
         //        img(src="http://demo.designwall.com/dw-minion/wp-content/uploads/the-inside-secrets-of-millionaires-under-the-age-of-29.jpg")
-        div(class="entry-content")
+        div(class="article-content")
             if item.description
                 p(itemprop="description")= item.description
             else if item.excerpt
@@ -37,3 +37,4 @@ section(class="article-list")
             a(class="more-link" href="#")
                 span(class="btn btn-small")= theme.excerpt_link
     -})
+include _partial/pagination
