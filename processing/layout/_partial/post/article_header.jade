@@ -1,1 +1,10 @@
-p Header
+header(class="entry-header")
+    h2(class="entry-title")
+        a(href="#{item.path}")= item.title
+    div(class="entry-meta")
+        span(class="sep")
+            span(class="post-format")
+                i(class="icon-file-text")
+        span(class="posted-on")
+            i(class="icon-calendar-empty")
+            time(class="entry-date published" datetime="#{item.updated}")= item.date.format(config.date_format)

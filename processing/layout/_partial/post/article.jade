@@ -8,7 +8,7 @@ article
         if table&&(item.toc !== false) && theme.toc.article
             div(id="toc" class="toc-article")
                 strong(class="toc-title")= __('contents')
-            !=toc(item.content)
+                !=toc(item.content)
         !=item.content
     include article_footer
 include article_comment

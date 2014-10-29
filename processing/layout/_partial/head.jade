@@ -5,54 +5,50 @@ head
     if config.author
         meta(name='author', content=config.author)
 
-    -var title= page.title
-    title=title
-
-    if (is_archive())
-        title __('Archives')
-    else if(is_category())
-        title __('categories')
-    else if(is_tag())
-        title __('tags')
-
-    -if(title){
+    if is_archive()
+        title= __('Archives')
+    else if is_category()
+        title= __('categories')
+    else if is_tag()
+        title= __('tags')
+    else if page.title
+        title= page.title
+    else
         title= config.title
-    -}
+
     meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1")
-    -if (config.author){ 
+    if config.author
         meta(name="author" content=config.author)
-    -} 
-    -if (page.description){ 
+    if page.description
         meta(name="description" itemprop="description" content=page.description)
-    -}else if (config.description&&(!is_post())){
+    else if config.description&&(!is_post())
         meta(name="description" content=config.description)
-    -}else if (page.excerpt){
+    else if page.excerpt
         meta(name="description" content=strip_html(page.excerpt).replace(/^\s*/, '').replace(/\s*$/, ''))
-    -} else if (page.content){
+    else if page.content
         meta(name="description" content=strip_html(page.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 150))
-    -}
-    -if (page.keywords){
+    if page.keywords
         meta(name="keywords" content=page.keywords)
-    -}
-    -if (theme.author.twitter){
+    if theme.author.twitter
         meta(name="twitter:card" content="summary" )
         meta(name="twitter:site" content=theme.author.twitter )
-        -if (title){
+        if title
         meta(name="twitter:title" content= title+"|"+config.title)
-        -}
-    -}
-    -if (page.description){
+    if page.description
         meta(name="twitter:description" content=page.description)
-    -}
-    -if (theme.rss){
+    if theme.rss
         link(rel="alternative" href=ßßtheme.rss title=config.title type="application/atom+xml")
-    -}
-    -if (theme.favicon){
+    if theme.favicon
         link(rel="icon" href= config.root + theme.favicon)
-    -}
-    -if (theme.apple_icon){
+    if theme.apple_icon
         link(rel="apple-touch-icon" href=config.root+theme.apple_icon)
         link(rel="apple-touch-icon-precomposed" href=config.root +theme.apple_icon)
-    -}
 
     link(rel="stylesheet", href=config.root + "css/style.css")
+
+    if theme.colorscheme.enable
+        -var color = theme.colorscheme.color
+        if color
+            link(rel="stylesheet", href=config.root + "js/styles/#{color}.css")
+        else
+            link(rel="stylesheet", href=config.root + "js/styles/arta.css")
