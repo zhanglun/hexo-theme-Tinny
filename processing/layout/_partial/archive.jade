@@ -14,7 +14,31 @@ if page.year
     -title= page.year+  (page.month ? '/' + page.month : '')
     -icon= 'time'
 
-div(class="page-header")
-    h1(class="page-title")
+div(class="archive-header")
+    h1(class="archive-title")
         i(class="icon-#{icon}")
         |#{title}
+
+section(class="article-list archive-page")
+    -page.posts.each(function(item){
+    article
+        header(class="entry-header")
+            h2(class="entry-title")
+                a(href="#{item.path}")= item.title
+            div(class="entry-meta")
+                span(class="sep")
+                    //span(class="post-format")
+                        //i(class="icon-file-text")
+                span(class="posted-on")
+                    i(class="icon-calendar-empty")
+                    time(class="entry-date published" datetime="#{item.updated}")= item.date.format(config.date_format)
+        div(class="entry-content")
+            if item.description
+                p(itemprop="description")= item.description
+            else if item.excerpt
+                p(itemprop="description")= strip_html(item.excerpt).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 140)+"……"
+            else
+                p(itemprop="description")= strip_html(item.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 140)+"……"
+            a(class="more-link" href="#")
+                span(class="btn btn-small")= theme.excerpt_link
+    -})
