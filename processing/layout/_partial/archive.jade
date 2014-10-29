@@ -24,11 +24,9 @@ section(class="article-list archive-page")
     article
         header(class="entry-header")
             h2(class="entry-title")
-                a(href="#{item.path}")= item.title
+                a(href="#{config.root}#{item.path}")= item.title
             div(class="entry-meta")
                 span(class="sep")
-                    //span(class="post-format")
-                        //i(class="icon-file-text")
                 span(class="posted-on")
                     i(class="icon-calendar-empty")
                     time(class="entry-date published" datetime="#{item.updated}")= item.date.format(config.date_format)
@@ -42,3 +40,18 @@ section(class="article-list archive-page")
             a(class="more-link" href="#")
                 span(class="btn btn-small")= theme.excerpt_link
     -})
+
+
+    //div(class="article-pagination pager")
+    //if (page.prev)
+    //    div(class="nav-previous")
+    //        a(href="#{config.root}#{page.prev_link}" title=__('prev') class="prevpage")
+    //            span(class="meta-nav btn")
+    //                i(class="icon-chevron-left")
+    //            span(class="pager-title") Take Advantage Of The Stock Market
+    //if (page.next)
+    //    div(class="nav-next")
+    //        a(href="#{config.root}#{page.next_link}" title=__('next') class="nextpage")
+    //            span(class="meta-nav btn")
+    //                i(class="icon-chevron-right")
+    //            span(class="pager-title") Take Advantage Of The Stock Market

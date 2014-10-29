@@ -5,7 +5,11 @@
  <a href="<%- config.root %><%- page.prev.path %>" title="<%= page.prev.title %>">
   <strong>PREVIOUS:</strong><br/>
   <span>
-  <% if (page.prev.title){ %><%= page.prev.title %><% } else { %>(no title)<% } %></span>
+  <% if (page.prev.title){ %>
+      <%= page.prev.title %>
+  <% } else { %>
+      (no title)
+      <% } %></span>
 </a>
 </div>
 <% } %>
