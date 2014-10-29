@@ -1,5 +1,5 @@
 aside(id="site-categories" class="widget widget-categories")
-	h2(class="widget-title")= __('categories')
+	h3(class="widget-title")= __('categories')
 	ul
 		-site.categories.sort("name").each(function(item){
 			li(class="cat-item")
