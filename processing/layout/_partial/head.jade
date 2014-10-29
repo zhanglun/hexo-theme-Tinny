@@ -6,11 +6,15 @@ head
         meta(name='author', content=config.author)
 
     if is_archive()
-        title= __('Archives')
+        title= __('archive_a')
+        if is_month()
+            title += ': ' + page.year + '/' + page.month
+        else if is_year()
+            title += ': ' + page.year
     else if is_category()
-        title= __('categories')
+        title= __('categories') + ": " +page.category
     else if is_tag()
-        title= __('tags')
+        title= __('tags') + ": " + page.tag
     else if page.title
         title= page.title
     else

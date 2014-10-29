@@ -114,26 +114,10 @@ li {
   display: block;
 }
 
-.icon-file-text:before {
-  content: "\f15c";
-}
 
-.icon-calendar-empty:before {
-  content: "\f133";
-}
 
-.icon-comment-alt:before {
-  content: "\f0e5";
-}
-
-.icon-chevron-left:before {
-  content: "\f053";
-}
-.icon-chevron-right:before {
-  content: "\f054";
-}
-
-[class^="icon-"]:before, [class*=" icon-"]:before {
+// Icon
+[class^="icon-"]::before, [class*=" icon-"]::before {
   display: inline-block;
   speak: none;
 }
@@ -157,3 +141,33 @@ li {
   text-decoration: inherit;
   -webkit-font-smoothing: antialiased;
 }
+
+
+.icon-file-text::before {
+  content: "\f15c";
+}
+
+.icon-calendar-empty::before {
+  content: "\f133";
+}
+
+.icon-comment-alt::before {
+  content: "\f0e5";
+}
+
+.icon-chevron-left::before {
+  content: "\f053";
+}
+.icon-chevron-right::before {
+  content: "\f054";
+}
+.icon-tag::before{
+  content: "\f02b";
+}
+.icon-tags::before{
+  content: "\f02c";
+}
+.icon-archive::before{
+  content: "\f187";
+}
+

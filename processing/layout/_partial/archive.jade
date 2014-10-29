@@ -1,0 +1,20 @@
+
+-var title = ''
+-var icon = ''
+if page.category
+    -title= __('categories') + ": " + page.category
+    -icon= 'category'
+if page.tag
+    -title= __('tags')+ ": " + page.tag
+    -icon= 'tag'
+if page.archive
+    -title= __('archive_a')
+    -icon= 'archive'
+if page.year
+    -title= page.year+  (page.month ? '/' + page.month : '')
+    -icon= 'time'
+
+div(class="page-header")
+    h1(class="page-title")
+        i(class="icon-#{icon}")
+        |#{title}
