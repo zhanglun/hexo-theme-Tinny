@@ -48,11 +48,12 @@ head
         link(rel="apple-touch-icon" href=config.root+theme.apple_icon)
         link(rel="apple-touch-icon-precomposed" href=config.root +theme.apple_icon)
 
-    link(rel="stylesheet", href=config.root + "css/style.css")
-
     if theme.colorscheme.enable
         -var color = theme.colorscheme.color
         if color
             link(rel="stylesheet", href=config.root + "js/styles/#{color}.css")
         else
             link(rel="stylesheet", href=config.root + "js/styles/arta.css")
+
+    link(rel="stylesheet", href=config.root + "css/style.css")
+
