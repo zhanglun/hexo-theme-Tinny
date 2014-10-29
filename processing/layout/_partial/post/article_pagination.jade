@@ -11,7 +11,7 @@ div(class="article-pagination pager")
                     span(class="pager-title")  (no title)
     if (page.next)
         div(class="nav-next")
-            a(href="#{config.root}#{page.next.path}" title="#{page.prev.title}" class="nextpage")
+            a(href="#{config.root}#{page.next.path}" title="#{page.next.title}" class="nextpage")
                 if page.next.title
                     span(class="pager-title")= page.next.title
                 else

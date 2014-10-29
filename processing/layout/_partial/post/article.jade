@@ -5,7 +5,7 @@ article
     include article_header
     div(class="article-content")
         include gallery
-        if table&&(item.toc !== false) && theme.toc.article
+        if table && (item.toc !== false) && theme.toc.article && toc(item.content)
             div(id="toc" class="toc-article")
                 strong(class="toc-title")= __('contents')
                 !=toc(item.content)
