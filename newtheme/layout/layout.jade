@@ -1,0 +1,21 @@
+doctype html
+
+if config.language
+    html(lang="#{config.language}")
+        include _partial/head
+        body
+            div(class="wrapper")
+                include _partial/toolbar
+                include _partial/container
+
+else
+    html(lang="en")
+        include _partial/head
+        body
+            div(class="wrapper")
+                include _partial/toolbar
+                include _partial/container
+
+
+
+

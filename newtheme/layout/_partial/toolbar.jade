@@ -1,0 +1,24 @@
+div(id="toolbar")
+    div(class="show-site-nav")
+        i(class="icon-reorder")
+    a(class="back-top")
+    ul(class="social-font")
+        -var authors = theme.author
+        if authors.google_plus
+            li
+                a(href="https://github.com/#{authors.github}" target="_blank" title="google_plus")
+
+        if authors.weibo
+            li
+                a(href="http://weibo.com/#{theme.author.weibo}" target="_blank" title="weibo")
+        if authors.twitter
+            li
+                a(href="https://twitter.com/#{authors.twitter}" target="_blank" title="twitter")
+
+        if authors.github
+            li
+                a(href="https://github.com/#{authors.github}" target="_blank" title="github")
+        if authors.facebook
+            li
+                a(href="https://www.facebook.com/#{authors.facebook}" target="_blank" title="facebook")
+

@@ -1,0 +1,171 @@
+#navigation {
+  float: left;
+  width: nav-width;
+  transform(translate(-150%, 0));
+  a {
+    color: #333;
+    &:hover {
+      color: primary-color;
+      text-decoration: underline;
+    }
+  }
+  @media phone {
+
+  }
+  @media tablet {
+
+  }
+  @media desktop {
+    transform(translate(0, 0));
+  }
+
+}
+
+#site-header {
+  .profile {
+    img {
+      width: 120px;
+      height: 120px;
+      border-radius: 100%;
+    }
+  }
+  .site-subtitle {
+    font-size: 1.8em;
+    font-weight: blod;
+    color: #343434;
+    margin: 0 0 12.5px;
+  }
+  .site-description {
+    font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    color: #aaaaaa;
+    font-size: 1.2em;
+    /*line-height: 20px;*/
+    margin: 12.5px 0 0;
+  }
+}
+
+.main-sidebar {
+  ul {
+    > li {
+      line-height: 30px;
+    }
+  }
+}
+
+// 组件
+
+.widget {
+  font-size: 1.4em;
+}
+
+.widget-nav-menu {
+  a {
+    display: block;
+  }
+}
+
+.widget-categories ul > li:before {
+  content: "\f115";
+  font-family: FontAwesome;
+  margin-right: 10px;
+}
+
+.widget-tagcloud {
+  a {
+    display: inline-block;
+    padding: 2px;
+    margin: 2px;
+  }
+}
+
+// 文章翻页
+.pager {
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  position: relative;
+  padding: 40px 0;
+  .disabled {
+    background: #444444;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 5px 12px;
+    box-sizing(border-box);
+    width:33px;
+    height:35px;
+  }
+  .pager-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 35px;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .nav-next {
+    float: right;
+    width: 50%;
+    text-align: right;
+    .pager-title {
+      margin-right: -33px;
+      padding: 0 53px 0 20px;
+    }
+  }
+
+  .nav-previous {
+    float: left;
+    width: 50%;
+    .pager-title {
+      margin-left: -33px;
+      padding: 0 20px 0 53px;
+    }
+
+  }
+
+  .nav-next, .nav-previous{
+    a:hover {
+      color: primary-color;
+      text-decoration: underline;
+    }
+    a:hover .btn{
+      background-color: #7cc576;
+      text-decoration: none;
+      color: #ffffff;
+  }
+    .btn {
+      font-size: 14px;
+      line-height: 25px;
+    }
+  }
+
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+  &:before {
+    display: block;
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    background: #e5e5e5;
+    top: 0;
+    left: 50%;
+  }
+
+}
+
+

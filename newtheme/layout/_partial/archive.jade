@@ -1,0 +1,57 @@
+
+-var title = ''
+-var icon = ''
+if page.category
+    -title= __('categories') + ": " + page.category
+    -icon= 'category'
+if page.tag
+    -title= __('tags')+ ": " + page.tag
+    -icon= 'tag'
+if page.archive
+    -title= __('archive_a')
+    -icon= 'archive'
+if page.year
+    -title= page.year+  (page.month ? '/' + page.month : '')
+    -icon= 'time'
+
+div(class="archive-header")
+    h2(class="archive-title")
+        i(class="icon-#{icon}")
+        |#{title}
+
+section(class="article-list archive-page")
+    -page.posts.each(function(item){
+    article
+        header(class="article-header")
+            h2(class="article-title")
+                a(href="#{config.root}#{item.path}")= item.title
+            div(class="article-meta")
+                span(class="sep")
+                span(class="posted-on")
+                    i(class="icon-calendar-empty")
+                    time(class="article-date published" datetime="#{item.updated}")= item.date.format(config.date_format)
+        div(class="article-content")
+            if item.description
+                p(itemprop="description")= item.description
+            else if item.excerpt
+                p(itemprop="description")= strip_html(item.excerpt).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 140)+"……"
+            else
+                p(itemprop="description")= strip_html(item.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 140)+"……"
+            a(class="more-link" href="#")
+                span(class="btn btn-small")= theme.excerpt_link
+    -})
+
+
+    //div(class="article-pagination pager")
+    //if (page.prev)
+    //    div(class="nav-previous")
+    //        a(href="#{config.root}#{page.prev_link}" title=__('prev') class="prevpage")
+    //            span(class="meta-nav btn")
+    //                i(class="icon-chevron-left")
+    //            span(class="pager-title") Take Advantage Of The Stock Market
+    //if (page.next)
+    //    div(class="nav-next")
+    //        a(href="#{config.root}#{page.next_link}" title=__('next') class="nextpage")
+    //            span(class="meta-nav btn")
+    //                i(class="icon-chevron-right")
+    //            span(class="pager-title") Take Advantage Of The Stock Market

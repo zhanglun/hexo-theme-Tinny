@@ -1,0 +1,137 @@
+#toolbar {
+  width:100%;
+  background: #222;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  font-size: 14px;
+  @media phone {
+    width: 100%;
+    min-width: 320px;
+  }
+  @media desktop {
+    width: site-action;
+    min-width: site-action;
+    height: 100%;
+  }
+  a {
+    display: inline-block;
+    width: site-action;
+    height: site-action;
+    line-height: site-action;
+    color: #444;
+    font-size: font-size + 20;
+    text-align: center;
+    box-sizing(border-box);
+    transition(all 0.2s ease-in-out);
+    @media phone {
+      // TODO:
+      border-left:1px solid #333;
+    }
+    @media tablet {
+      // TODO:
+    }
+    @media desktop {
+      width: 100%;
+      border-bottom:1px solid #333;
+      border-left:none;
+    }
+    &:hover {
+      color: #fff;
+      background: #111;
+    }
+    &:hover:before {
+      color: color-blue;
+    }
+    &[title]::before, &[title="weibo"]::before, &[title="twitter"]::before, &[title="github"]::before, &[title="facebook"]::before {
+      font-family: font-icon-family;
+      font-smoothing();
+    }
+    &[title="google_plus"]::before {
+      content: "\f0d5";
+    }
+    &[title="weibo"]::before {
+      content: "\f18a";
+    }
+    &[title="twitter"]::before {
+      content: "\f099";
+    }
+    &[title="github"]::before {
+      content: "\f09b";
+    }
+    &[title="facebook"]::before {
+      content: "\f09a";
+    }
+  }
+  .back-top {
+    float: right;
+    border-left:1px solid #333;
+    /*&::before {*/
+      /*content: "\f0c1";*/
+    /*}*/
+    &::before {
+      content: "\f077";
+    }
+    &::before {
+      font-family: font-icon-family;
+      font-smoothing();
+    }
+    @media phone {
+
+    }
+    @media desktop {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      border-top:1px solid #333;
+      border-left:none;
+      &::before {
+        content: "\f077";
+      }
+    }
+  }
+}
+
+.social-font {
+  overflow: hidden;
+  float: right;
+  text-align: center;
+  li {
+    float: left;
+    height: site-action;
+  }
+  @media phone {
+    float: right;
+  }
+  @media tablet {
+    // TODO:
+  }
+  @media desktop {
+    width: 100%;
+    li {
+      float: none;
+    }
+  }
+}
+
+.show-site-nav {
+  float: left;
+  width: site-action;
+  height: site-action;
+  border-right: 1px solid #333;
+  text-align:center;
+  line-height:site-action;
+  font-family: font-icon-family;
+  font-smoothing();
+  &::before {
+    content: "\f0c9";
+  }
+  @media phone {
+
+  }
+  @media desktop{
+    display:none;
+  }
+}
