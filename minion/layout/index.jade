@@ -34,7 +34,7 @@ section(class="article-list")
                 p(itemprop="description")= strip_html(item.excerpt).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 140)+"……"
             else
                 p(itemprop="description")= strip_html(item.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 140)+"……"
-            a(class="more-link" href="#")
+            a(class="more-link" href="#{config.root}#{item.path}")
                 span(class="btn btn-small")= theme.excerpt_link
     -})
 include _partial/pagination

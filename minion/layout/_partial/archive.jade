@@ -37,21 +37,7 @@ section(class="article-list archive-page")
                 p(itemprop="description")= strip_html(item.excerpt).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 140)+"……"
             else
                 p(itemprop="description")= strip_html(item.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 140)+"……"
-            a(class="more-link" href="#")
+            a(class="more-link" href="#{config.root}#{item.path}")
                 span(class="btn btn-small")= theme.excerpt_link
     -})
 
-
-    //div(class="article-pagination pager")
-    //if (page.prev)
-    //    div(class="nav-previous")
-    //        a(href="#{config.root}#{page.prev_link}" title=__('prev') class="prevpage")
-    //            span(class="meta-nav btn")
-    //                i(class="icon-chevron-left")
-    //            span(class="pager-title") Take Advantage Of The Stock Market
-    //if (page.next)
-    //    div(class="nav-next")
-    //        a(href="#{config.root}#{page.next_link}" title=__('next') class="nextpage")
-    //            span(class="meta-nav btn")
-    //                i(class="icon-chevron-right")
-    //            span(class="pager-title") Take Advantage Of The Stock Market

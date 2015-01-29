@@ -1,6 +1,6 @@
 ##### Menu
 menu:
-  Home: #
+  Home: /
   Archives: /archives
   About: http://ncuey.sinaapp.com/CrispElite/
   Github: https://github.com/zhanglun
@@ -34,7 +34,7 @@ rss: ## RSS address.
 #### Image
 imglogo:
   enable: true             ## display image logo true/false.
-  src: img/logo.png        ## `.svg` and `.png` are recommended,please put image into the theme folder `/Tinny/source/img`.
+  src: img/myLogo.png        ## `.svg` and `.png` are recommended,please put image into the theme folder `/Tinny/source/img`.
 favicon: img/favicon.ico   ## size:32px*32px,`.ico` is recommended,please put image into the theme folder `/Tinny/source/img`.     
 apple_icon: img/Tinny.jpg ## size:114px*114px,please put image into the theme folder `/Tinny/source/img`.
 
@@ -79,8 +79,8 @@ author:
   google_plus: 116338260303228776998  ## eg:116338260303228776998 for https://plus.google.com/u/0/116338260303228776998
   intro_line1: Hello ,I'm Larry Page in Google.  ## eg: "Hello ,I'm Larry Page in Google."
   intro_line2: This is my blog,believe it or not. ## eg: "This is my blog,believe it or not."
-  weibo: 436062867       ## e.g. 436062867 for http://weibo.com/436062867
-  twitter: yangjiansky     ## e.g. yangjiansky for https://twitter.com/yangjiansky
+  weibo: 2671026564       ## e.g. 436062867 for http://weibo.com/436062867
+  twitter: zhanglun1410     ## e.g. yangjiansky for https://twitter.com/yangjiansky
   github: zhanglun      ## e.g. A-limon for https://github.com/A-limon
   facebook:     ## e.g. yangjian for https://favebook.com/yangjian
   tsina:        ## e.g. 1664838973  Your weibo ID,It will be used in share button.
