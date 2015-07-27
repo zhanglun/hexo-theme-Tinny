@@ -1,7 +1,0 @@
-aside(id="site-categories" class="widget widget-categories")
-	h3(class="widget-title")= __('categories')
-	ul
-		-site.categories.sort("name").each(function(item){
-			li(class="cat-item")
-				a(href=config.root+item.path)=item.name
-		-})
