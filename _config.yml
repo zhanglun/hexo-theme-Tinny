@@ -3,8 +3,7 @@ menu:
   首页: /
   归档: /archives
   博客园: http://www.cnblogs.com/zhanglun/
-  Page: http://zhanglun.github.io/
-  关于我: http://ncuey.sinaapp.com/CrispElite/
+  实验室: /lab
 ## you can create `tags` and `categories` folders in `../source`.
 ## And create a `index.md` file in each of them.
 ## set `front-matter`as
