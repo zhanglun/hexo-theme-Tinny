@@ -11,7 +11,7 @@
     </h1>
     <% if (desc){ %>
      <% if(item.description){ %>
-      <p itemprop="description" ><%- item.description %></p>
+      <p itemprop="description" class="article-description" ><%- item.description %></p>
       <% } else if(item.excerpt){ %>
        <p itemprop="description" ><%= strip_html(item.excerpt).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 140) %></p>
       <% } else {%>

@@ -1,9 +1,11 @@
 body
   >header
     width 100%
-    box-shadow 2px 4px 5px hsla(0,1%,1%,.2)
     background color-header
-    color color-white
+    box-shadow boxshadow
+    color lighten(color-black, 20%)
+    position fixed
+    z-index 1000
     @media tablet
       //padding 1.8em 0 1.5em
     >div
@@ -14,7 +16,7 @@ body
       @media tablet
         width 93%
     a
-      color color-white
+      color lighten(color-black, 20%)
 
 #imglogo
   float left
@@ -69,7 +71,7 @@ body
   position absolute
   width 2em
   right 0em
-  top 0.5em
+  top 0.2em
   font-size 24px
   @media tablet
     display none
@@ -136,9 +138,9 @@ header nav
 .closeaside
   display none
   a
-    color color-white
+    color color-black
     padding 0
-    font-size 24px
+    font-size 22px
     &:hover
       color color-blue
     &::before

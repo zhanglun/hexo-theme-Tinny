@@ -2,10 +2,11 @@
 #container
   width 95%
   margin 0 auto
+  padding-top 55px
   @media mini
     width 96%
   @media tablet
-    width 94%
+    width 82%
   @media desktop
     width 82%
 
@@ -13,27 +14,24 @@
   margin 1em 0 0
   font-size 87.5%
   line-height line-height+0.3
-  box-shadow boxshadow
-  background #fff
-  h1
-    font-weight bolder
   @media tablet
     margin 2em 0 0
     width 75%
     float left
     transition margin 0.5s ease-out
   section.post
-    //box-shadow boxshadow
+    margin-bottom 0.8em
+    box-shadow boxshadow
 
-    padding 0.2em 0.8em 0.1em
+    padding 0.4em 1.6em 1em
     @media mini
       padding 1.2em 1.5em 0.1em
     article
       background-color color-white
-      background-image url(../img/dots-2x.png)
-      background-position left bottom
-      background-repeat repeat-x
-      background-size 5px auto
+      // background-image url(../img/dots-2x.png)
+      // background-position left bottom
+      // background-repeat repeat-x
+      // background-size 5px auto
       padding 0 0 0.4em 0
       @media mini
           padding 0 0 0.8em 0
@@ -55,13 +53,18 @@
         display block
         margin 0.5em 0
         font-size 0.5em
+    .article-description {
+      margin-top 12px
+    }
     .article-more-link
       font-size 0.875em
+      margin-top 10px
       overflow hidden
       a
         float right
 .moveMain
-  margin-left 10% !important
+  margin 2em auto 0 !important
+  width: 84% !important
 
 #page-nav
   background color-white

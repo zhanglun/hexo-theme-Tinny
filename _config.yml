@@ -85,7 +85,7 @@ author:
   twitter:        ## e.g. yangjiansky for https://twitter.com/yangjiansky
   github: 'zhanglun'      ## e.g. A-limon for https://github.com/A-limon
   facebook:       ## e.g. yangjian for https://favebook.com/yangjian
-  tsina:          ## e.g. 1664838973  Your weibo ID,It will be used in share button.
+  tsina: '2671026564'         ## e.g. 1664838973  Your weibo ID,It will be used in share button.
 
 #### Comment
 duoshuo: 
@@ -100,7 +100,7 @@ jiathis:
 
 #### Analytics
 google_analytics:
-  enable: false
+  enable: true
   id:   ## e.g. UA-1766729-8 your google analytics ID.
   site: ## e.g. yangjian.me your google analytics site or set the value as auto.
 ## You MUST upgrade to Universal Analytics first!

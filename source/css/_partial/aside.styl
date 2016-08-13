@@ -1,6 +1,6 @@
 //sidebar
 #asidepart
-  background color-section
+  background color-white
   font-size 87.5%
   margin 1em 0 0
   padding 0.5em 2% 1em
@@ -14,11 +14,11 @@
 .asidetitle
   font-size 1.1em
   color color-blue
-  background-color color-section
-  background-image url(../img/dots-2x.png)
-  background-position left bottom
-  background-repeat repeat-x
-  background-size 5px auto
+  background-color color-white
+  // background-image url(../img/dots-2x.png)
+  // background-position left bottom
+  // background-repeat repeat-x
+  // background-size 5px auto
   padding 0 0 0.3125em 0
   margin 0 0 0.4em 0
     &:hover
@@ -196,7 +196,7 @@
   if dataURI
     background no-repeat url(author-img-data) left top
   else
-    background no-repeat url(root+author-img) left top
+    background no-repeat url( '../' + root+author-img) left top
   background-size w w
   border-radius (w/2)
   transition transform 2s ease-out

@@ -53,8 +53,8 @@
     <% } %>
 
 	<% if(theme.colorscheme.enable) {%>
-	<link href="http://cdn.bootcss.com/highlight.js/8.2/styles/<%- theme.colorscheme.color%>.min.css" rel="stylesheet">
-	<script src="http://cdn.bootcss.com/highlight.js/8.2/highlight.min.js"></script>
+	<link href="<%- config.root %>highlight/styles/<%- theme.colorscheme.color%>.css" rel="stylesheet">
+	<script src="<%- config.root %>highlight/highlight.pack.js"></script>
 	<script>hljs.initHighlightingOnLoad();</script>
 	<% } %>
 
