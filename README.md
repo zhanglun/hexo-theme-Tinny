@@ -5,7 +5,6 @@
 
 simple theme based on [pacman](https://github.com/A-limon/pacman).
 
-[demo](http://zhanglun.github.io/)
 
 ### Installation
 
